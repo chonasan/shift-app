@@ -1,5 +1,9 @@
 class Public::EmployeesController < ApplicationController
-  def my_page
+  
+  def show
+  end
+  
+  def mypage
   end
 
   def edit

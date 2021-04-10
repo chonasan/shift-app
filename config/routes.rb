@@ -27,8 +27,11 @@ Rails.application.routes.draw do
   
    scope module: :public do
     root 'homes#top'
-    get 'employees/mypage' => 'employees#show', as: 'mypage'
-    get 'employees/mypage' => 'employees#show'
+    get 'employees/mypage' => 'employees#mypage', as: 'mypage'
+    get 'employees/mypage' => 'employees#mypage'
+    get 'shifts/fixed_my_shift' => 'shifts#fixed_my_shift'
+    get 'shifts/sent_shift' => 'shifts#sent_shift'
+    get 'shifts/shift_sending' => 'shifts#shift_sending'
 
     resources :employees, only: [:index, :edit, :update]
     resources :messages, only: [:create]

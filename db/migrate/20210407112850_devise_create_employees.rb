@@ -39,7 +39,7 @@ class DeviseCreateEmployees < ActiveRecord::Migration[5.2]
       t.string :postal_code, null: false
       t.string :address, null: false
       t.string :telephone_number, null: false
-      t.boolean :is_deleted, default: false, null: false
+      t.boolean :is_deleted, default: true, null: false
       t.boolean :approval_status, default: false, null: false
 
 
