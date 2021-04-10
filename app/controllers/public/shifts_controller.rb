@@ -34,15 +34,11 @@ class Public::ShiftsController < ApplicationController
       start_time = Time.zone.parse("#{date} #{start_hour_time}:#{start_minute_time}")
       end_time = Time.zone.parse("#{date} #{end_hour_time}:#{end_minute_time}")
       shift = current_employee.shifts.new(start_time: start_time, end_time: end_time)
-      if shift save
-        redirect_to shifts_path, notice: "shift is saved"
-      else
-        render :sent_shift
-      end
-    # #   unless shift.save
-    # #     is_succeeded = false
-    # #   end
-    # # end
+      shift.save
+    #   unless shift.save
+    #     is_succeeded = false
+    #   end
+    # end
     
     # if is_succeeded
     #   redirect_to shifts_path, notice: "shift is saved"
