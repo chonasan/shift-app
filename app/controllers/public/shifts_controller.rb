@@ -4,6 +4,9 @@ class Public::ShiftsController < ApplicationController
 
   def index
   end
+  
+  def calendar
+  end
 
   def sent_shift
     @shift = Shift.new

@@ -8,7 +8,20 @@ $(function() {
   }
 
   $('#calendar').fullCalendar({
-    events: '/events.json',
+    events: '/shifts/calendar.json',
+    // [
+    //     {
+    //       title: 'Business Lunch',
+    //       start: '2021-04-03T13:00:00',
+    //       constraint: 'businessHours'
+    //     },
+    //     {
+    //       title: 'Meeting',
+    //       start: '2021-04-13T11:00:00',
+    //       constraint: 'availableForMeeting', // defined below
+    //       color: '#257e4a'
+    //     }
+    // ],
 
     titleFormat: 'YYYY年 M月',
     dayNamesShort: ['日', '月', '火', '水', '木', '金', '土'],
