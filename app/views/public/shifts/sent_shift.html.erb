@@ -1,23 +1,27 @@
 <h1>Public::Shifts#sent_shift</h1>
 <p>Find me in app/views/public/shifts/sent_shift.html.erb</p>
 
+<%= link_to 'Create shift', shifts_sent_shift_path, remote: true, class: "btn btn-lg, btn-primary" %>
 
-<%= form_with model: @shift do |f| %>
-
-  <!--f.hidden_field :item_id, :value => @item.id %>-->
-　<%= f.select :year, (2021..2021).to_a, {include_blank: '年'}, { class: 'form-control' , required: true } %>
-  <%= f.select :month, (04..12).to_a, {include_blank: '月'}, { class: 'form-control' , required: true } %>
-　<%= f.select :date, (01..31).to_a, {include_blank: '日'}, { class: 'form-control' , required: true } %>
-　<!--f.hidden_field :item_id, :value => @item.id %>-->
-　
-
-  <%= f.select :start_hour_time, (01..24).to_a, {include_blank: '時間'}, { class: 'form-control' , required: true } %>
-  <%= f.select :start_minute_time, [0,15,30,45], {include_blank: '分'}, { class: 'form-control' , required: true } %>
-  <%= f.select :end_hour_time, (01..24).to_a, {include_blank: '時間'}, { class: 'form-control' , required: true } %>
-  <%= f.select :end_minute_time, [0,15,30,45], {include_blank: '分'}, { class: 'form-control' , required: true } %>
-  <%= f.submit %>
-<% end %>
-
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <%= form_with model: @shift do |f| %>
+    
+      <!--f.hidden_field :item_id, :value => @item.id %>-->
+    　<%= f.select :year, (2021..2021).to_a, {include_blank: '年'}, { class: 'form-control',style: "width:70px;" , required: true } %>
+      <%= f.select :month, (04..12).to_a, {include_blank: '月'}, { class: 'form-control',style: "width:70px;" , required: true } %>
+    　<%= f.select :date, (01..31).to_a, {include_blank: '日'}, { class: 'form-control',style: "width:70px;" , required: true } %>
+    　<!--f.hidden_field :item_id, :value => @item.id %>-->
+    
+    
+      <%= f.select :start_hour_time, (01..24).to_a, {include_blank: '時間'}, { required: true } %>
+      <%= f.select :start_minute_time, [0,15,30,45], {include_blank: '分'}, { required: true } %>
+      <%= f.select :end_hour_time, (01..24).to_a, {include_blank: '時間'}, { required: true } %>
+      <%= f.select :end_minute_time, [0,15,30,45], {include_blank: '分'}, { required: true } %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>
 
   <div id='calendar'></div>
 
