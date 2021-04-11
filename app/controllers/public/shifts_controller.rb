@@ -6,7 +6,7 @@ class Public::ShiftsController < ApplicationController
   end
 
   def calendar
-    # @event = current.shift.all
+   @events = current_employee.shifts
   end
 
   def sent_shift
@@ -41,7 +41,7 @@ class Public::ShiftsController < ApplicationController
       end_time = Time.zone.parse("#{year}/#{month}/#{date} #{end_hour_time}:#{end_minute_time}")
       shift = current_employee.shifts.new(start_time: start_time, end_time: end_time)
       shift.save
-      
+      render :sent_shift
     #   unless shift.save
     #     is_succeeded = false
     #   end
