@@ -102,3 +102,6 @@ gem 'kaminari', '~> 1.2.1'
 gem 'jquery-rails'
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
+
+#デバックツール
+gem 'pry-rails'

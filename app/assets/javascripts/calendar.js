@@ -8,20 +8,30 @@ $(function() {
   }
 
   $('#calendar').fullCalendar({
-    events: '/shifts/calendar.json',
-    // [
-    //     {
-    //       title: 'Business Lunch',
-    //       start: '2021-04-03T13:00:00',
-    //       constraint: 'businessHours'
-    //     },
-    //     {
-    //       title: 'Meeting',
-    //       start: '2021-04-13T11:00:00',
-    //       constraint: 'availableForMeeting', // defined below
-    //       color: '#257e4a'
-    //     }
-    // ],
+    events:// '//shifts/calendar.json',
+    [
+         {
+          title: 'Meeting',
+          start: '2021-04-12 10:30:00',
+          end: '2021-04-12 12:30:00'
+        },
+
+
+        {
+          start: '2021-04-03 13:00:00',
+          constraint: 'businessHours'
+        },
+        {
+          end: '2021-04-03T16:00:00',
+          constraint: 'businessHours'
+        },
+
+        {
+          start: '2021-04-13T11:00:00',
+          constraint: 'availableForMeeting', // defined below
+          color: '#257e4a'
+        }
+    ],
 
     titleFormat: 'YYYY年 M月',
     dayNamesShort: ['日', '月', '火', '水', '木', '金', '土'],
