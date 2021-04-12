@@ -105,3 +105,4 @@ gem 'momentjs-rails'
 
 #デバックツール
 gem 'pry-rails'
+
