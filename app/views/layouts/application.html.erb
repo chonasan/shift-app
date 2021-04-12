@@ -8,39 +8,13 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
-  <header>
-  <nav>
-    <ul>
-      <% if employee_signed_in? %>
-        <li>ユーザー</li>
-        <li><%= link_to "マイページ", mypage_path %></li>
-        <li><%= link_to "従業員一覧", employees_path %></li>
-        <li><%= link_to "共有コメント", share_comments_path %></li>
-        <li><%= link_to "シフト表", shifts_path %></li>
-        <li><%= link_to "マイシフト", shifts_fixed_my_shift_path %></li>
-        <li><%= link_to "シフト登録", shifts_sent_shift_path %></li>
-        <li><%= link_to "ログアウト", destroy_employee_session_path, method: :delete %></li>
-      <% elsif admin_signed_in? %>
-        <li>管理者</li>
-        <li><%= link_to "承認ページ", admin_employees_authority_path %></li>
-        <li><%= link_to "従業員一覧", admin_employees_path %></li>
-        <li><%= link_to "作業登録", admin_tasks_path %></li>
-        <li><%= link_to "シフト作成", admin_shifts_path %></li>
-        <li><%= link_to "ログアウト", destroy_admin_session_path, method: :delete %></li>
-      <% else %>
-        <li>ゲストユーザー</li>
-        <li><%= link_to "top", root_path %></li>
-        <li><%= link_to "新規登録", new_employee_registration_path %></li>
-        <li><%= link_to "ログイン", new_employee_session_path %></li>
-        <li><%= link_to "管理者ログイン", admin_session_path %></li>
-      <% end %>
-    </ul>
-  </nav>
-</header>
-
-
+  
   <body>
-    <%= yield %>
+    <%= render 'layouts/header' %>
+    <div style="margin: 70px; padding-bottom: 50px; ">
+      <%= yield %>
+    </div>
+    <%= render 'layouts/footer' %>
   </body>
-</html>
+
+ 

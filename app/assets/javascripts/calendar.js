@@ -8,20 +8,24 @@ $(document).on('turbolinks:load', function () {
   }
 
   $('#calendar').fullCalendar({
-    events: //'calendar.json',
-    [
-        {
-          title: 'Meeting',
-          start: '2021-04-12 10:30:00',
-          end: '2021-04-12 12:30:00'
-        },
+    displayEventTime: true,
+		displayEventEnd: true,
+    navLinks: true,
+    editable: true,
+    events: 'calendar.json'
+    // [
+    //     {
+    //       title: 'Meeting',
+    //       start: '2021-04-12 10:30:00',
+    //       end: '2021-04-12 12:30:00'
+    //     },
 
 
-        {
-          start: '2021-04-03 13:00:00',
-          constraint: 'businessHours'
-        }
-    ],
+    //     {
+    //       start: '2021-04-03 13:00:00',
+    //       constraint: 'businessHours'
+    //     }
+    // ],
 
     titleFormat: 'YYYY年 M月',
     dayNamesShort: ['日', '月', '火', '水', '木', '金', '土'],
@@ -47,5 +51,5 @@ $(document).on('turbolinks:load', function () {
     eventColor: '#63ceef',
     eventTextColor: '#000000',
   });
-  
+
 });
