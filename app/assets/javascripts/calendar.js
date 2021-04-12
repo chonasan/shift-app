@@ -12,7 +12,7 @@ $(document).on('turbolinks:load', function () {
 		displayEventEnd: true,
     navLinks: true,
     editable: true,
-    events: 'calendar.json'
+    events: 'calendar.json',
     // [
     //     {
     //       title: 'Meeting',
