@@ -11,6 +11,7 @@ class Public::ShiftsController < ApplicationController
 
   def sent_shift
     @shift = Shift.new
+    #日付値を送ってもらう
   end
 
   def destroy

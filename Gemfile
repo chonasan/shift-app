@@ -99,7 +99,6 @@ gem "cancancan"
 gem 'kaminari', '~> 1.2.1'
 
 #fullcalendar
-gem 'jquery-rails'
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
 

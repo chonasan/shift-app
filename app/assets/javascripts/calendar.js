@@ -11,22 +11,18 @@ $(document).on('turbolinks:load', function () {
     displayEventTime: true,
 		displayEventEnd: true,
     navLinks: true,
+    navLinkDayClick: function(date, jsEvent) {
+      console.log('day', date.format()); // date is a moment
+  
+      console.log('day', date.month());
+  
+      $("#shift_year").val(date.year());
+      $("#shift_month").val(date.month()+1);
+      $("#shift_date").val(date.date());
+      $('#myModal').modal('show')
+    },
     editable: true,
     events: 'calendar.json',
-    // [
-    //     {
-    //       title: 'Meeting',
-    //       start: '2021-04-12 10:30:00',
-    //       end: '2021-04-12 12:30:00'
-    //     },
-
-
-    //     {
-    //       start: '2021-04-03 13:00:00',
-    //       constraint: 'businessHours'
-    //     }
-    // ],
-
     titleFormat: 'YYYY年 M月',
     dayNamesShort: ['日', '月', '火', '水', '木', '金', '土'],
 
