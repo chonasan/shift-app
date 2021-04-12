@@ -10,10 +10,10 @@ $(document).on('turbolinks:load', function () {
   $('#calendar').fullCalendar({
     displayEventTime: true,
 		displayEventEnd: true,
+		
     navLinks: true,
     navLinkDayClick: function(date, jsEvent) {
       console.log('day', date.format()); // date is a moment
-  
       console.log('day', date.month());
   
       $("#shift_year").val(date.year());
@@ -21,7 +21,14 @@ $(document).on('turbolinks:load', function () {
       $("#shift_date").val(date.date());
       $('#myModal').modal('show')
     },
+    
     editable: true,
+    eventClick: function(calEvent, jsEvent, view) {
+    $("#shift_year").val(calEvent.start());
+    $("#shift_year").val(calEvent.end());
+    $('#myModal').modal('show')
+    
+  },
     events: 'calendar.json',
     titleFormat: 'YYYY年 M月',
     dayNamesShort: ['日', '月', '火', '水', '木', '金', '土'],
