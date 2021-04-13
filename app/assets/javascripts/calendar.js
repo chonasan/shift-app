@@ -36,7 +36,7 @@ $(document).on('turbolinks:load', function () {
       end: 'today prev,next',
     },
 
-    defaultTimedEventDuration: '03:00:00',
+    // defaultTimedEventDuration: '03:00:00',
     buttonText: {
       prev: '前',
       next: '次',

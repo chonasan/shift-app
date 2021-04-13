@@ -1,6 +1,6 @@
 <header class="p-3 mb-2 bg-dark border border-info sticky-top" style="height: 80px;">
   <div class="container">
- 
+
       <% if employee_signed_in? %>
        <nav class="navbar navbar-expand-lg">
           <li>
@@ -15,6 +15,7 @@
               <li><%= link_to "共有コメント", share_comments_path , class: "btn btn-outline-light"%></li>
               <li><%= link_to "シフト表", shifts_path, class: "btn btn-outline-light" %></li>
               <li><%= link_to "シフト登録", shifts_sent_shift_path, class: "btn btn-outline-light" %></li>
+              <li><%= link_to "シフト編集", shifts_shift_sending_path, class: "btn btn-outline-light" %></li>
               <li><%= link_to "ログアウト", destroy_employee_session_path, method: :delete , class: "btn btn-outline-light" %></li>
              </ul>
           </div>
@@ -33,8 +34,8 @@
               <li><%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class: "btn btn-outline-light"%></li>
             </ul>
           </div>
-        </nav>  
-              
+        </nav>
+
       <% else %>
         <nav class="navbar navbar-expand-lg">
           <li>
@@ -50,6 +51,6 @@
               <li><%= link_to "管理者ログイン", admin_session_path, class: "btn btn-outline-light" %></li>
              </ul>
           </div>
-        </nav>    
+        </nav>
       <% end %>
 </header>

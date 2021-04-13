@@ -1,2 +1,16 @@
 <h1>Public::Shifts#shift_sending</h1>
+<編集一覧画面>
 <p>Find me in app/views/public/shifts/shift_sending.html.erb</p>
+       <div class='col-md-8 offset-md-1'>
+          <h2>送信シフト一覧</h2>
+          <table class='table table-hover table-inverse'>
+            <% @shifts.each do |shift| %>
+               <tr>
+                <td><%= shift.start_time%></td>
+                <td><%= shift.end_time %></td>
+                <td><%= link_to "Edit", edit_shift_path(shift.id) %></td>
+                <td><%= link_to "Destroy", shift_path(shift.id), method: :delete %></td>
+               </tr>
+            <% end %>
+         </table>
+        </div>

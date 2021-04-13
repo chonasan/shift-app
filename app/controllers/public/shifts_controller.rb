@@ -28,6 +28,7 @@ class Public::ShiftsController < ApplicationController
   end
 
   def shift_sending
+   @shifts = current_employee.shifts
   end
 
   def create
