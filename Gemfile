@@ -106,3 +106,9 @@ gem 'momentjs-rails'
 gem 'pry-rails'
 
 gem 'rails-ujs'
+
+#環境変数
+gem 'dotenv-rails'
+group :production do
+  gem 'mysql2'
+end
