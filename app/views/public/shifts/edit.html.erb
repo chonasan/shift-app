@@ -1,2 +1,16 @@
 <h1>Public::Shifts#edit</h1>
 <p>Find me in app/views/public/shifts/edit.html.erb</p>
+
+<%= @shift.start_time.year%>
+<%= @shift.start_time.month%>
+<%= @shift.start_time.date%>
+
+<%= form with model :@shift do |f| %>
+ <%= f.select :start_time_hour, (00..23).to_a, {include_blank: '開始時間'}, { class: 'form-control',required: true } %>
+ <%= f.select :start_time_minute, [0,15,30,45], {include_blank: '開始分'}, { class: 'form-control',required: true } %>
+ <%= f.select :end_time_hour, (00..23).to_a, {include_blank: '開始時間'}, { class: 'form-control',required: true } %>
+ <%= f.select :end_time_minute, [0,15,30,45], {include_blank: '開始分'}, { class: 'form-control',required: true } %>
+ <%= f.submit class: "btn btn-primary"%>
+<% end %>
+ 
+ <!--メソッドは？何（ドキュメントetc..）のどこを見てどのように判断して、答えに行き着くのか？スキーマ関係ある？-->

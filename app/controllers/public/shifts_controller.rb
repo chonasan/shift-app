@@ -19,7 +19,7 @@ class Public::ShiftsController < ApplicationController
   end
 
   def edit
-    @events = current_employee.shifts
+    @shift = current_employee.shifts.find(params[:id])
   end
 
   def update

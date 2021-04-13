@@ -38,6 +38,7 @@ $(document).on('turbolinks:load', function () {
       center: 'title',
       right: 'today prev,next',
     },
+    
 
     defaultTimedEventDuration: '03:00:00',
     buttonText: {
