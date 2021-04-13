@@ -13,9 +13,6 @@ $(document).on('turbolinks:load', function () {
 	  displayEventEnd: true,
 	  navLinks: true,
     navLinkDayClick: function(date, jsEvent) {
-      console.log('day', date.toISOString()); // date is a moment
-      console.log('day', date);
-
       $("#shift_year").val(date.getFullYear());
       $("#shift_month").val(date.getMonth()+1);
       $("#shift_date").val(date.getDate());
@@ -30,6 +27,7 @@ $(document).on('turbolinks:load', function () {
     },
     events: 'calendar.json',
     //titleFormat: 'YYYY年 M月',
+    dayNames: ['日曜日', '月曜日', '火曜日', '水曜日', '木曜日', '金曜日', '土曜日'],
     dayNamesShort: ['日', '月', '火', '水', '木', '金', '土'],
 
     headerToolbar: {
@@ -37,8 +35,6 @@ $(document).on('turbolinks:load', function () {
       center: 'title',
       end: 'today prev,next',
     },
-
-
 
     defaultTimedEventDuration: '03:00:00',
     buttonText: {
@@ -51,8 +47,9 @@ $(document).on('turbolinks:load', function () {
       week: '週',
       day: '日',
     },
+
     timeFormat: 'HH:mm',
-    eventColor: '#63ceef',
+    eventColor: '#dc143c',
     eventTextColor: '#000000',
   });
   calendar.render();
