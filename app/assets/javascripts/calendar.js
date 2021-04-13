@@ -53,6 +53,8 @@ $(document).on('turbolinks:load', function () {
     eventTextColor: '#000000',
   });
   calendar.render();
+  
+});
 
 //   $('#calendar').fullCalendar({
 //     displayEventTime: true,
@@ -104,4 +106,3 @@ $(document).on('turbolinks:load', function () {
 //     eventTextColor: '#000000',
 //   });
 
- });
