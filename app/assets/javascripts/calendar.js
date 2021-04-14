@@ -9,6 +9,8 @@ $(document).on('turbolinks:load', function () {
 
   var calendarEl = document.getElementById('calendar');
   var calendar = new FullCalendar.Calendar(calendarEl, {
+    timeZone: "JST",
+    locale:"ja",
     displayEventTime: true,
 	  displayEventEnd: true,
 	  navLinks: true,
@@ -27,8 +29,8 @@ $(document).on('turbolinks:load', function () {
     },
     events: 'calendar.json',
     //titleFormat: 'YYYY年 M月',
-    dayNames: ['日曜日', '月曜日', '火曜日', '水曜日', '木曜日', '金曜日', '土曜日'],
-    dayNamesShort: ['日', '月', '火', '水', '木', '金', '土'],
+    //dayNames: ['日曜日', '月曜日', '火曜日', '水曜日', '木曜日', '金曜日', '土曜日'],
+    //dayNamesShort: ['日', '月', '火', '水', '木', '金', '土'],
 
     headerToolbar: {
       start: 'dayGridMonth,timeGridWeek',
@@ -48,12 +50,26 @@ $(document).on('turbolinks:load', function () {
       day: '日',
     },
 
-    timeFormat: 'HH:mm',
+    //axisFormat: 'H(:mm)',
+    //timeFormat: 'HH:mm',
+    //titleFormat: 'HH:mm',
+    //timeFormat: 'H(:mm)',
+    //eventTimeFormat: 'HH:mm',
+
+    eventTimeFormat: {
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12:false
+  },
+
+    eventDisplay: 'block',
     eventColor: '#dc143c',
     eventTextColor: '#000000',
+    eventBorderColor:'#dc143c',
+    eventBackgroundColor:"#ff7f50",
   });
   calendar.render();
-  
+
 });
 
 //   $('#calendar').fullCalendar({

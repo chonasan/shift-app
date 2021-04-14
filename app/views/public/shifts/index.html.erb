@@ -12,7 +12,6 @@
         </button>
       </div>
       <div class="modal-body">
-
         <p>
         <%= form_with model: @shift do |f| %>
         <%= f.select :year, (2021..2021).to_a, {include_blank: '年'}, { class: 'form-control', required: true } %>
