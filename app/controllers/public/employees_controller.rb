@@ -13,5 +13,6 @@ class Public::EmployeesController < ApplicationController
   end
 
   def index
+    @employees = Employee.all
   end
 end

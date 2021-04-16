@@ -28,8 +28,10 @@ class Public::ShiftsController < ApplicationController
   end
 
   def shift_sending
+    
    @shifts = current_employee.shifts
    @shifts = @shifts.order(start_time: "DESC")
+   
   end
 
   def create
@@ -66,10 +68,10 @@ class Public::ShiftsController < ApplicationController
   def sent_shift_params
     params.require(:shift).permit(:year, :month, :date, :start_hour_time, :start_minute_time, :end_hour_time, :end_minute_time)
   end
-
+  
   def shift_params
     params.require(:shift).permit(:start_time,:end_time)
   end
-
-
+  
+  
 end

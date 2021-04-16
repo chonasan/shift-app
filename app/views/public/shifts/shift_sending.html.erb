@@ -1,8 +1,10 @@
 <h1>Public::Shifts#shift_sending</h1>
-<編集一覧画面>
 <p>Find me in app/views/public/shifts/shift_sending.html.erb</p>
+
        <div class='col-md-8 offset-md-1'>
+         <div class="bg-light px-25 w-25 text-center">
           <h2>送信シフト一覧</h2>
+         </div>
           <table class='table table-hover table-inverse'>
             <tr>
              <td>開始時間</td>
@@ -10,10 +12,26 @@
              <td></td>
              <td></td>
             </tr>
+
+
             <% @shifts.each do |shift| %>
                <tr>
-                <td><%= shift.start_time%></td>
-                <td><%= shift.end_time %></td>
+                <td>
+                  <%= shift.start_time.year%>年
+                  <%= shift.start_time.mon%>月
+                  <%= shift.start_time.day%>日
+                  (<%= shift.start_time.wday%>)
+                  <%= shift.start_time.hour%>時
+                  <%= shift.start_time.min%>分
+                </td>
+                <td>
+                  <%= shift.end_time.year%>年
+                  <%= shift.end_time.mon%>月
+                  <%= shift.end_time.day%>日
+                  (<%= shift.end_time.wday%>)
+                  <%= shift.end_time.hour%>時
+                  <%= shift.end_time.min%>分
+                </td>
                 <td><%= link_to "削除する", shift_path(shift.id), method: :delete %></td>
                </tr>
             <% end %>

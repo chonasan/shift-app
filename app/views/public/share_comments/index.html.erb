@@ -1,7 +1,7 @@
 <h1>Public::ShareComments#index</h1>
 <p>Find me in app/views/public/share_comments/index.html.erb</p>
 
-<div class="container-fluid">
+<div class='container px-5 px-sm-0'>
   <div class="row pb-5">
     <div class="bg-light px-25 w-25 text-center">
       <h3>共有コメント一覧</h3>
@@ -9,12 +9,14 @@
     <!--共有コメント登録-->
     <div class="offset-8">
       <td><%= link_to "新規投稿", new_share_comment_path %></td>
-      
-      <!--<%= link_to new_share_comment_path do %>-->
-      <!--<i class="fas fa-plus-circle fa-3x size"></i>-->
-      <!--<% end %>-->
+
+      <%= link_to new_share_comment_path do %>
+      <i class="fas fa-plus-circle fa-3x size"></i>
+      <% end %>
     </div>
   </div>
+  
+</div>
 
 <div class="card-list-container py-5">
 <% @share_comments.each do |share_comment| %>
