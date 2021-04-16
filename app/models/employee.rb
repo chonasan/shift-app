@@ -12,4 +12,13 @@ class Employee < ApplicationRecord
   has_many :entrys, dependent: :destroy
   has_many :messages, dependent: :destroy
 
+  # def active_for_authentication?
+  #   super && (self.approval_status == true)
+  # end
+
+  def active_for_authentication?
+    super && (self.is_deleted == true)
+  end
+
+
 end

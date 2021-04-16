@@ -7,13 +7,13 @@ Rails.application.routes.draw do
     get 'employees/authority' => 'employees#authority'
     get 'employees/approval' => 'employees#approval'
     patch 'employees/approval_process' => 'employees#approval_process'
-    get 'employees/unsubscribe' => 'employees#unsubscribe'
-    patch 'employees/withdraw' => 'employees#withdraw', as: 'withdraw_customer'
+    get 'employees/unsubscribe/:id' => 'employees#unsubscribe',as: 'employees_unsubscribe'
+    patch 'employees/withdraw/:id' => 'employees#withdraw', as: 'employees_withdraw'
     put 'employees/withdraw' => 'employees#withdraw'
     patch 'employees/update_all' => 'employees#update_all'
 
     resources :employees, only: [:index] do
-     resources :fixed_shifts, only: [:show, :create, :updete]
+      resources :fixed_shifts, only: [:show, :create, :updete]
     end
 
     resources :tasks, only: [:index, :create, :edit, :update]
