@@ -9,13 +9,12 @@
              <td>終了時間</td>
              <td></td>
              <td></td>
-            </tr>  
+            </tr>
             <% @shifts.each do |shift| %>
                <tr>
                 <td><%= shift.start_time%></td>
                 <td><%= shift.end_time %></td>
-                <td><%= link_to "Edit", edit_shift_path(shift.id) %></td>
-                <td><%= link_to "Destroy", shift_path(shift.id), method: :delete %></td>
+                <td><%= link_to "削除する", shift_path(shift.id), method: :delete %></td>
                </tr>
             <% end %>
          </table>
