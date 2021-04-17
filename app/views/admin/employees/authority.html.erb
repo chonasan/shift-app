@@ -13,7 +13,7 @@
   　　</thead>
       <tbody>
         <% @employees.each do |employee| %>
-        <% if employee.is_deleted == false %>
+        <% if employee.approval_status == false %>
           <tr>
             <td><%= employee.id %></td>
             <td><%= employee.first_name + employee.last_name%></td>

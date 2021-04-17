@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   }
   namespace :admin do
     get 'employees/authority' => 'employees#authority'
-    get 'employees/approval' => 'employees#approval'
-    patch 'employees/approval_process' => 'employees#approval_process'
+    get 'employees/approval/:id' => 'employees#approval', as:'employees_approval'
+    patch 'employees/approval_process/:id' => 'employees#approval_process', as:'employees_approval_process'
     get 'employees/unsubscribe/:id' => 'employees#unsubscribe',as: 'employees_unsubscribe'
     patch 'employees/withdraw/:id' => 'employees#withdraw', as: 'employees_withdraw'
     put 'employees/withdraw' => 'employees#withdraw'
