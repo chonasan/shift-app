@@ -1,0 +1,38 @@
+<h3 class="bg-light m-10 px-25 w-25 text-center">未承認一覧</h3>
+
+<div class="container">
+  <div class="row">
+　　<table class='table table-hover table-inverse'>
+  　　<thead>
+    　　<tr>
+      　　<th>会員ID</th>
+      　　<th>氏名</th>
+      　　<th>ステータス</th>
+      　　<th></th>
+    　　</tr>
+  　　</thead>
+      <tbody>
+        <% @employees.each do |employee| %>
+        <% if employee.is_deleted == false %>
+          <tr>
+            <td><%= employee.id %></td>
+            <td><%= employee.first_name + employee.last_name%></td>
+            <td>
+              未承認
+            </td>
+            <td>
+                <%= link_to "承認する", admin_employees_approval_path(employee) %>
+            </td>
+          </tr>
+          <% end %>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+  <div class='row'>
+    <div class="offset-5 text-center">
+      <%= paginate @employees %>
+    </div>
+  </div>

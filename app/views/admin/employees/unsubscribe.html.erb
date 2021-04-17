@@ -6,7 +6,7 @@
         <p>対象の従業員がログインできなくなります。</p>
         <p>退会させる場合は、『退会する』をクリックしてください。</p>
         <%= link_to '退会しない', admin_employees_path, class:"btn btn-primary" %>
-        <%= link_to "退会する", admin_employees_withdraw_path(employee), class: "btn btn-danger" ,method: :patch %>
+        <%= link_to "退会する", admin_employees_withdraw_path(@employee), class: "btn btn-danger" ,method: :patch %>
 
       </div>
     </div>

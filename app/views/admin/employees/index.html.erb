@@ -16,13 +16,18 @@
           <tr>
             <td><%= employee.id %></td>
             <td><%= employee.first_name + employee.last_name%></td>
-            <td><% if employee.is_deleted == true %>
-                  有効
-                <% else %>
-                  退会
-                <% end %>
+            <td>
+              <% if employee.is_deleted == true %>
+                有効
+              <% else %>
+                退会
+              <% end %>
             </td>
-            <td><%= link_to "退会処理をする", admin_employees_unsubscribe_path(employee) %></td>
+            <td>
+              <% if employee.is_deleted == true %>
+                <%= link_to "退会処理をする", admin_employees_unsubscribe_path(employee) %>
+              <% end %>
+            </td>
           </tr>
         <% end %>
       </tbody>

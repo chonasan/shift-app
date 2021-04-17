@@ -1,6 +1,7 @@
 class Admin::EmployeesController < ApplicationController
 
   def authority
+    @employees = Employee.all.page(params[:page]).per(10)
   end
 
   def approval
@@ -30,7 +31,7 @@ class Admin::EmployeesController < ApplicationController
 
 
   def employee_params
-    params.require(:employee).permit(:last_name, :first_name, :last_name_kana, :first_name_kana,:is_deleted)
+    params.require(:employee).permit(:last_name, :first_name, :last_name_kana, :first_name_kana,:is_deleted,:approval_status)
   end
 
 end
