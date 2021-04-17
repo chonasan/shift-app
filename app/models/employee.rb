@@ -4,8 +4,8 @@ class Employee < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :checks, as: :postable
-  has_many :share_comments, as: :postable
+  has_many :checks, as: :cheakable
+  has_many :share_comments, as: :cheakable
 
   has_many :shifts, dependent: :destroy
   has_many :fixed_shifts, dependent: :destroy

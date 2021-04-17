@@ -1,5 +1,8 @@
 class ShareComment < ApplicationRecord
-  belongs_to :postable, polymorphic: true
-  belongs_to :postable, polymorphic: true
+  attachment :image
+
+  belongs_to :cheakable, polymorphic: true
   has_many :checks, dependent: :destroy
+
+
 end

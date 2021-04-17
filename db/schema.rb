@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 2021_04_08_102923) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.string "first_name", null: false
+    t.string "last_name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_admins_on_email", unique: true
@@ -25,7 +27,7 @@ ActiveRecord::Schema.define(version: 2021_04_08_102923) do
   end
 
   create_table "checks", force: :cascade do |t|
-    t.integer "shared_comment_id", null: false
+    t.integer "share_comment_id", null: false
     t.string "cheakable_type"
     t.integer "cheakable_id"
     t.datetime "created_at", null: false

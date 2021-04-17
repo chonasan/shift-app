@@ -14,7 +14,7 @@
         <% end %>
 
         <%= form_with model: @share_comment, local:true do |f| %>
-
+          <%= f.attachment_field :image, class: "w-100" %>
           <div class="input-group mb-3 mt-4">
           </div>
           <%= f.text_area :comment, class:"form-control", rows:"3", placeholder:"コメントここに" %>
