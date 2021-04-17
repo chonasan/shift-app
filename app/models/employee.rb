@@ -17,7 +17,7 @@ class Employee < ApplicationRecord
   # end
 
   def active_for_authentication?
-    super && (self.is_deleted == true)
+    super && (self.is_deleted == true) && (self.approval_status == true)
   end
 
 
