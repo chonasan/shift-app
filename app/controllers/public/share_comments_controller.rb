@@ -4,10 +4,10 @@ class Public::ShareCommentsController < ApplicationController
   end
 
   def destroy
-    ShareComment.find_by(id: params[:id], post_image_id: params[:post_image_id]).destroy
-    redirect_to post_image_path(params[:post_image_id])
+   ShareComment.find(params[:id]).destroy
+   redirect_to share_comments_path
   end
-  
+
   def destroy_all
     ShareComment.where(cheakable_id: 対象のID, cheakable_type: "Employee")
     @share_comment.destroy_all

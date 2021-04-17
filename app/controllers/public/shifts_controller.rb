@@ -28,10 +28,8 @@ class Public::ShiftsController < ApplicationController
   end
 
   def shift_sending
-    
    @shifts = current_employee.shifts
    @shifts = @shifts.order(start_time: "DESC")
-   
   end
 
   def create

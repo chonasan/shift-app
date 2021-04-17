@@ -23,7 +23,10 @@
       <div class="col-12">
         <p class="card-text">コメント：<%= share_comment.comment %></p>
         <span><i class="fas fa-user"></i><%= share_comment.cheakable.first_name %><%= share_comment.cheakable.last_name %> </span>
-        <span><%= share_comment.created_at %></span>
+        <span><%= share_comment.created_at %></span>|
+        <% if current_cheakable = share_comment.cheakable %>
+          <span><%= link_to "削除する", share_comment_path(share_comment.id), method: :delete %></span>
+        <% end %>
       </div>
     </div>
   </div>
