@@ -98,8 +98,8 @@ ActiveRecord::Schema.define(version: 2021_04_08_102923) do
     t.integer "employee_id", null: false
     t.datetime "confirmation_start_time"
     t.datetime "confirmation_end_time"
-    t.datetime "start_time", null: false
-    t.datetime "end_time", null: false
+    t.datetime "start_time"
+    t.datetime "end_time"
     t.integer "state_status", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

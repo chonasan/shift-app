@@ -11,7 +11,7 @@ class Admin::ShiftsController < ApplicationController
       end
     end
 
-    @shifts = Shift.where(state_status: "1")
+    @shifts = Shift.where(state_status:["1","4"])
 
   end
 
@@ -32,8 +32,9 @@ class Admin::ShiftsController < ApplicationController
   end
 
   def new
-
     @shift = Shift.new
+    @employees = Employee.all
+    # pluck(:last_name, :first_name ,:id)
   end
 
   def create
@@ -46,8 +47,8 @@ class Admin::ShiftsController < ApplicationController
       end_minute_time = confirmation_shift_params[:end_minute_time]
       confirmation_start_time = Time.zone.parse("#{year}/#{month}/#{date} #{start_hour_time}:#{start_minute_time}")
       confirmation_end_time = Time.zone.parse("#{year}/#{month}/#{date} #{end_hour_time}:#{end_minute_time}")
-      shift = current_employee.shifts.new(start_time: start_time, end_time: end_time)
-      shift.save
+      shift = Shift.new(confirmation_start_time: confirmation_start_time, confirmation_end_time: confirmation_end_time,employee_id: params[:shift][:employee] )
+      shift.save!
       shift.update(state_status: "4")
       redirect_to admin_shifts_path, notice: "shift is saved"
   end
@@ -57,7 +58,7 @@ class Admin::ShiftsController < ApplicationController
 
   private
 
-  def confirmation__shift_params
+  def confirmation_shift_params
     params.require(:shift).permit(:year, :month, :date, :start_hour_time, :start_minute_time, :end_hour_time, :end_minute_time)
   end
 

@@ -13,13 +13,15 @@
           <% end %>
         <% end %>
 
-        <%= form_with model: @shift do |f| %>
+        <%= form_with model: @shift,url: admin_shifts_path do |f| %>
           <div class='row mb-3'>
             <div class="col-lg-4">
-            
+              <div class="col-lg-4">
+              <%= f.select :employee, @employees.map{ |employee| [ employee.first_name+employee.last_name, employee.id] }, {include_blank: '名前'}, { class: 'form-control', style: "width:130px;", required: true } %>
+            </div>
             </div>
           </div>
-              
+
           <div class='row mb-3'>
             <div class="col-lg-4">
               <%= f.select :year, (2021..2021).to_a, {include_blank: '年'}, { class: 'form-control', style: "width:130px;", required: true } %>
