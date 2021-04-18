@@ -1,2 +1,63 @@
 <h1>Admin::Shifts#new</h1>
 <p>Find me in app/views/admin/shifts/new.html.erb</p>
+
+<div class="container">
+  <div class="row no-gutters">
+    <div class="col-md-5 col-sm-10 mx-2 mx-sm-auto shadow-lg rounded px-0 my-5">
+      <h5 class="text-dark bg-light p-4 mb-0">シフト新規登録</h5>
+      <div class="form-body p-4">
+        <% if @shift.errors.any? %>
+          <%= @shift.errors.count %>件のエラーが発生しました
+          <% @shift.errors.full_messages.each do |message| %>
+            <%= message %>
+          <% end %>
+        <% end %>
+
+        <%= form_with model: @shift do |f| %>
+          <div class='row mb-3'>
+            <div class="col-lg-4">
+            
+            </div>
+          </div>
+              
+          <div class='row mb-3'>
+            <div class="col-lg-4">
+              <%= f.select :year, (2021..2021).to_a, {include_blank: '年'}, { class: 'form-control', style: "width:130px;", required: true } %>
+            </div>
+            <div class="col-lg-4">
+              <%= f.select :month, (01..12).to_a, {include_blank: '月'}, {class: 'form-control', style: "width:130px;",required: true } %>
+            </div>
+            <div class="col-lg-4">
+              <%= f.select :date, (01..31).to_a, {include_blank: '日'}, {class: 'form-control', style: "width:130px;",required: true } %>
+            </div>
+          </div>
+          <div class='row mb-1'>
+            <div class="col-lg-4">
+              <h3>開始時間</h3>
+            </div>
+            <div class="col-lg-4">
+              <%= f.select :start_hour_time, (00..23).to_a, {include_blank: '開始時間'}, { class: 'form-control', style: "width:130px;",required: true } %>
+            </div>
+            <div class="col-lg-4">
+              <%= f.select :start_minute_time, [0,15,30,45], {include_blank: '開始分'}, { class: 'form-control', style: "width:130px;",required: true } %>
+            </div>
+          </div>
+          <div class='row mb-3'>
+            <div class="col-lg-4">
+              <h3>終了時間</h3>
+            </div>
+            <div class="col-lg-4">
+              <%= f.select :end_hour_time, (00..23).to_a, {include_blank: '終了時間'}, { class: 'form-control', style: "width:130px;",required: true } %>
+            </div>
+           <div class="col-lg-4">
+              <%= f.select :end_minute_time, [0,15,30,45], {include_blank: '終了分'}, { class: 'form-control', style: "width:130px;",required: true } %>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <%= f.submit '登録', class: "btn btn-primary"%>
+            <% end %>
+      </div>
+    </div>
+  </div>
+</div>
