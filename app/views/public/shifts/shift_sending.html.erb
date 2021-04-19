@@ -32,7 +32,7 @@
         </td>
         <td>
           <% if shift.start_time >= Date.today-15 %>
-          <%= link_to "削除する", shift_path(shift.id), method: :delete %>
+            <%= link_to "削除する", shift_path(shift.id), method: :delete %>
           <% end %>
         </td>
        </tr>
