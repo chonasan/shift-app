@@ -17,9 +17,14 @@
  @import "fullcalendar/main";
  @import "font-awesome-sprockets";
  @import "font-awesome";
- 
+
 
  li{
   list-style:none;
    margin:0px 10px;
+}
+
+.footer-text {
+  color: #fff;
+  text-align: center;
 }

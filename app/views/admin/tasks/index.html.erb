@@ -1,2 +1,29 @@
-<h1>Admin::Tasks#index</h1>
-<p>Find me in app/views/admin/tasks/index.html.erb</p>
+<h3 class="bg-light mt-5 ml-5 px-5 w-25 text-center">作業一覧・追加</h3>
+<div class="container ml-5">
+  <%= form_with model: @task, url: admin_tasks_path, local:true do |f| %>
+    <div class="row pt-5">
+      <h6 class="col-2 pt-2 pl-2">ジャンル名</h6>
+      <%= f.text_field :work_name, placeholder:'作業名', class: "col-3 mr-5" %>
+      <%= f.submit '新規登録', class: "btn btn-success col-2" %>
+    </div>
+  <% end %>
+</div>
+
+<div class="col-4 pt-5 pl-5">
+  <table class="table">
+    <thead class="bg-light">
+      <tr>
+        <th class="pl-5">作業</th>
+        <th colspan="1"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @tasks.each do |task| %>
+        <tr>
+          <td class="pt-3"><%= task.work_name %></td>
+          <td class="ml-3"><%= link_to '編集する', edit_admin_task_path(task.id), class: 'btn btn-success' %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
