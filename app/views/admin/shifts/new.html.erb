@@ -16,9 +16,7 @@
         <%= form_with model: @shift,url: admin_shifts_path do |f| %>
           <div class='row mb-3'>
             <div class="col-lg-4">
-              <div class="col-lg-4">
               <%= f.select :employee, @employees.map{ |employee| [ employee.first_name+employee.last_name, employee.id] }, {include_blank: '名前'}, { class: 'form-control', style: "width:130px;", required: true } %>
-            </div>
             </div>
           </div>
 

@@ -11,10 +11,13 @@
 <div>
 
 <%= shift.employee.first_name %>
-<%= shift.employee.last_name %>
-<%= shift.confirmation_start_time %>
-<%= shift.confirmation_end_time %>
-<%= link_to "削除する", admin_shift_path(shift.id), method: :delete %>
+<%= shift.confirmation_start_time.hour %>:
+<%= shift.confirmation_start_time.min %>〜
+<%= shift.confirmation_end_time.hour %>:
+<%= shift.confirmation_end_time.min %>
+
+
+<%= link_to "削除", admin_shift_path(shift.id), method: :delete %>
 
 </div>
 <% end %>

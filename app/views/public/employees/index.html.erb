@@ -16,7 +16,7 @@
         <% @employees.each do |employee| %>
         <tr>
           <td><%= employee.first_name %><%= employee.last_name %></td>
-          <td><%= link_to "Show", employee_path(employee.id) %></td>
+          <td><%= link_to "メッセージ", employee_path(employee.id) %></td>
         </tr>
         <% end %>
       </table>

@@ -4,9 +4,11 @@ class Public::EmployeesController < ApplicationController
   end
   
   def mypage
+    @employee = current_employee
   end
 
   def edit
+    @employee = current_employee
   end
 
   def update
