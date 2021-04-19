@@ -10,7 +10,14 @@ class Admin::ShiftsController < ApplicationController
       shift.save
       end
     end
-    @shifts = Shift.where(state_status:["1","4"])
+
+    days = Date.today.wday-1
+    if days == -1
+      days = 6
+    end
+    monday  = Date.today-days
+    @terms = (monday..monday+6)
+    @shifts = Shift.where(state_status:["1","4"],:confirmation_start_time=> monday..monday+6)
   end
 
   def update_all
