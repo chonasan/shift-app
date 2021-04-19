@@ -22,16 +22,16 @@
    <td><%= date %></td>
    <td><%= %w(日 月 火 水 木 金 土)[date.wday]%></td>
    <% (0..23).each do |hour|%>
-       <td><%= @shifts.where(:confirmation_start_time=> DateTime.new(date.year,date.month,date.day,hour,0,0)..DateTime.new(date.year,date.month,date.day,hour,0,0)).last&.employee&.first_name %></td>
+       <td>
+         <%= @shifts.where(:confirmation_start_time=> DateTime.new(date.year,date.month,date.day,hour,0,0)..DateTime.new(date.year,date.month,date.day,hour,0,0)).last&.employee&.first_name %>
+         <%= @shifts.where(:confirmation_end_time=> DateTime.new(date.year,date.month,date.day,hour,0,0)..DateTime.new(date.year,date.month,date.day,hour,0,0)).last&.employee&.first_name %>
+       </td>
    <% end %>
  </tr>
 <% end %>
 </tbody>
 </table>
-<!--tr 7日分-->
-<!--td 0〜23-->
-<!--td-->
-<!--tr-->
+
 
 
 <% @shifts.each do |shift| %>
