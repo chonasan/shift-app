@@ -6,7 +6,7 @@
         <p>対象の従業員がログインできる様になります。</p>
         <p>承認する場合は、『承認する』をクリックしてください。</p>
         <%= link_to '承認しない', admin_employees_authority_path, class:"btn btn-primary" %>
-        <%= link_to "承認する", admin_employees_approval_process_path(@employee), class: "btn btn-danger" ,method: :patch %>
+        <%= link_to "承認する", admin_employees_approval_process_path(@employee),  class: "btn btn-success" ,method: :patch %>
       </div>
     </div>
   </div>

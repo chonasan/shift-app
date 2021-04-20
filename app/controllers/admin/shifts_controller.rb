@@ -19,6 +19,12 @@ class Admin::ShiftsController < ApplicationController
   end
 
   def update_all
+    @shift = Shift.all
+    @shift.each do|shift|
+      if shift.state_status == 1 && 4
+        shift.update(state_status: "5")
+      end
+    end
   end
 
   def destroy
@@ -37,6 +43,7 @@ class Admin::ShiftsController < ApplicationController
   end
 
   def update
+    
   end
 
   def personal_shift
