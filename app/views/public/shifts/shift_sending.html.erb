@@ -30,7 +30,7 @@
           <%= shift.end_time.min%>分
         </td>
         <td>
-          <% if shift.start_time >= Date.today-15 %>
+          <% if shift.start_time >= Date.today+10 %>
             <%= link_to "削除する", shift_path(shift.id), method: :delete, class: "btn btn-danger"  %>
           <% end %>
         </td>

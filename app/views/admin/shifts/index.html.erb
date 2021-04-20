@@ -1,53 +1,51 @@
-<h1>Admin::Shifts#index</h1>
-<p>Find me in app/views/admin/shifts/index.html.erb</p>
-
-<div class="offset-8">
+<div class="bg-light px-25 w-25 text-center">
+  <h3>従業員一覧</h3>
+</div>
+<div class="offset-11 mb-3">
   <%= link_to new_admin_shift_path do %>
   <i class="fas fa-plus-circle fa-3x size"></i>
   <% end %>
 </div>
-<table>
+
+<table class="table table-bordered">
   <thead>
-<tr>
-  <th></th>
-  <th></th>
-  <% (0..23).each do |hour|%>
-    <th><%= hour %></th>
-  <% end %>
-</tr>
-</thead>
-<tbody>
-<% @terms.each do |date| %>
- <tr>
-   <td><%= date %></td>
-   <td><%= %w(日 月 火 水 木 金 土)[date.wday]%></td>
-   <% (0..23).each do |hour|%>
-       <td>
-         <%= @shifts.where(:confirmation_start_time=> DateTime.new(date.year,date.month,date.day,hour,0,0)..DateTime.new(date.year,date.month,date.day,hour,0,0)).last&.employee&.first_name %>
-         <%= @shifts.where(:confirmation_end_time=> DateTime.new(date.year,date.month,date.day,hour,0,0)..DateTime.new(date.year,date.month,date.day,hour,0,0)).last&.employee&.first_name %>
-       </td>
-   <% end %>
- </tr>
-<% end %>
-</tbody>
+    <tr>
+      <th><%= @terms.first.month %>月</th>
+      <th></th>
+      <% (0..23).each do |hour|%>
+      <th><%= hour %>時</th>
+      <% end %>
+    </tr>
+  </thead>
+  <tbody>
+    <% @terms.each do |date| %>
+        <% today_shift = @shifts.where('confirmation_start_time >= ? and confirmation_end_time <= ?', DateTime.new(date.year,date.month,date.day,0,0,0), DateTime.new(date.year,date.month,date.day,23,59,59)) %>
+        <% today_shift.each do |shift| %>
+            <tr>
+            <td><%= date.day %>日</td>
+            <td><%= %w(日 月 火 水 木 金 土)[date.wday]%></td>
+            <% (0..23).each do |hour| %>
+               <% if shift.confirmation_start_time <= DateTime.new(date.year,date.month,date.day,hour,0,0) && shift.confirmation_end_time > DateTime.new(date.year,date.month,date.day,hour,0,0) %>
+                    <% if shift.confirmation_start_time == DateTime.new(date.year,date.month,date.day,hour,0,0) %>
+                        <td style="background-color:gray;">
+                          <%=shift.employee.first_name %>
+                          <%= shift.confirmation_start_time.hour %>〜
+                          <%= shift.confirmation_end_time.hour %>
+                          <%= link_to "削除", admin_shift_path(shift.id), method: :delete %>
+                        </td>
+                    <% else %>
+                        <td style="color:red;background-color:gray;"></td>
+                    <% end %>
+                <% else %>
+                    <td></td>
+                <% end %>
+            <% end %>
+            </tr>
+        <% end %>
+    <% end %>
+  </tbody>
 </table>
 
-
-
-<% @shifts.each do |shift| %>
-<div>
-
-<%= shift.employee.first_name %>
-<%= shift.confirmation_start_time %>
-<%= shift.confirmation_start_time.hour %>:
-<%= shift.confirmation_start_time.min %>〜
-<%= shift.confirmation_end_time.hour %>:
-<%= shift.confirmation_end_time.min %>
-
-
-<%= link_to "削除", admin_shift_path(shift.id), method: :delete %>
-
+<div class="col-12">
+  <%= link_to "シフトの内容保存する", admin_shifts_shift_update_path, class: "btn btn-success" %>
 </div>
-<% end %>
-
-<%= link_to "登録する", admin_shifts_shift_update_path, class: "btn btn-success" %>
