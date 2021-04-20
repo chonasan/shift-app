@@ -1,6 +1,14 @@
 class Public::ShiftsController < ApplicationController
 
   def index
+    days = Date.today.wday-1
+    if days == -1
+      days = 6
+    end
+    monday  = Date.today-days
+    @terms = (monday..monday+6)
+    @shifts = Shift.where(state_status:["5"],:confirmation_start_time=> monday..monday+6)
+
   end
 
   def calendar
@@ -9,10 +17,8 @@ class Public::ShiftsController < ApplicationController
 
   def personal_shift
    @shifts = current_employee.shifts.where(state_status:["5"])
-   @shifts = @shifts.order(start_time: "DESC")
+   @shifts = @shifts.order(confirmation_start_time: "DESC")
   end
-
-
 
   def sent_shift
     @shift = Shift.new

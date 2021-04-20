@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     patch 'employees/withdraw/:id' => 'employees#withdraw', as: 'employees_withdraw'
     put 'employees/withdraw' => 'employees#withdraw'
     get 'shifts/shift_update' => 'shifts#shift_update',as: 'shifts/shift_update'
-    patch 'shifs/update_all' => 'shifs#update_all'
+    patch 'shifts/update_all' => 'shifts#update_all'
     get 'shifts/personal_shift/:id' => 'shifts#personal_shift',as: 'shifts/personal_shift'
 
     resources :employees, only: [:index] do

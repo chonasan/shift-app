@@ -12,6 +12,7 @@
 
     <% days = ["日", "月", "火", "水", "木", "金", "土"] %>
     <% @shifts.each do |shift| %>
+      <% if shift.start_time != nil %>
        <tr>
         <td>
           <%= shift.start_time.year%>年
@@ -35,6 +36,7 @@
           <% end %>
         </td>
        </tr>
+      <% end %>
     <% end %>
   </table>
 </div>

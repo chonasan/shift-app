@@ -1,5 +1,44 @@
-<h1>Public::Shifts#index</h1>
-<p>Find me in app/views/public/shifts/index.html.erb</p>
+<div class="bg-light px-25 w-25 text-center">
+  <h3>従業員一覧</h3>
+</div>
 
-
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>名前</th>
+      <th><%= @terms.first.month %>月</th>
+      <th></th>
+      <% (0..23).each do |hour|%>
+      <th><%= hour %>時</th>
+      <% end %>
+    </tr>
+  </thead>
+  <tbody>
+    <% @terms.each do |date| %>
+        <% today_shift = @shifts.where('confirmation_start_time >= ? and confirmation_end_time <= ?', DateTime.new(date.year,date.month,date.day,0,0,0), DateTime.new(date.year,date.month,date.day,23,59,59)) %>
+        <% today_shift.each do |shift| %>
+            <tr>
+            <td><%=shift.employee.first_name %></td>
+            <td><%= date.day %>日</td>
+            <td><%= %w(日 月 火 水 木 金 土)[date.wday]%></td>
+            <% (0..23).each do |hour| %>
+               <% if shift.confirmation_start_time <= DateTime.new(date.year,date.month,date.day,hour,0,0) && shift.confirmation_end_time > DateTime.new(date.year,date.month,date.day,hour,0,0) %>
+                    <% if shift.confirmation_start_time == DateTime.new(date.year,date.month,date.day,hour,0,0) %>
+                        <td style="background-color:darkgray;">
+                          <%=shift.employee.first_name %>
+                          <%= shift.confirmation_start_time.hour %>時〜
+                          <%= shift.confirmation_end_time.hour %>時
+                        </td>
+                    <% else %>
+                        <td style="color:red;background-color:darkgray;"></td>
+                    <% end %>
+                <% else %>
+                    <td></td>
+                <% end %>
+            <% end %>
+            </tr>
+        <% end %>
+    <% end %>
+  </tbody>
+</table>
 
