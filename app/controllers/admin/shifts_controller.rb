@@ -39,6 +39,12 @@ class Admin::ShiftsController < ApplicationController
   def update
   end
 
+  def personal_shift
+    @employee = Employee.find(params[:id])
+    @shifts = @employee.shifts.where(state_status:["5"])
+    @shifts = @shifts.order(start_time: "DESC")
+  end
+
   def new
     @shift = Shift.new
     @employees = Employee.all

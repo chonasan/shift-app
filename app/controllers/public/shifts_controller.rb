@@ -1,13 +1,18 @@
 class Public::ShiftsController < ApplicationController
-  def fixed_my_shift
-  end
 
   def index
   end
 
   def calendar
-   @events = current_employee.shifts
+   @events = current_employee.shifts.where(state_status:["0","1","2"])
   end
+
+  def personal_shift
+   @shifts = current_employee.shifts.where(state_status:["5"])
+   @shifts = @shifts.order(start_time: "DESC")
+  end
+
+
 
   def sent_shift
     @shift = Shift.new

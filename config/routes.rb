@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     patch 'employees/withdraw/:id' => 'employees#withdraw', as: 'employees_withdraw'
     put 'employees/withdraw' => 'employees#withdraw'
     patch 'employees/update_all' => 'employees#update_all'
+    get 'shifts/personal_shift/:id' => 'shifts#personal_shift',as: 'shifts/personal_shift'
 
     resources :employees, only: [:index] do
       resources :fixed_shifts, only: [:show, :create, :updete]
@@ -29,7 +30,7 @@ Rails.application.routes.draw do
     root 'homes#top'
     get 'employees/mypage' => 'employees#mypage', as: 'mypage'
     get 'employee/edit' => 'employees#edit'
-    get 'shifts/fixed_my_shift' => 'shifts#fixed_my_shift'
+    get 'shifts/personal_shift' => 'shifts#personal_shift'
     get 'shifts/sent_shift' => 'shifts#sent_shift'
     get 'shifts/shift_sending' => 'shifts#shift_sending'
     get 'shifts/calendar' => 'shifts#calendar'

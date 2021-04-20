@@ -1,0 +1,39 @@
+<div class="container">
+  <div class='row'>
+    <div class='col-10'>
+      <table class='table table-hover table-inverse'>
+      <div class="bg-light px-20 w-20 text-center">
+        <h2>個人シフト一覧</h2>
+      </div>
+        <tr>
+          <td>開始時間</td>
+          <td>終了時間</td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <% days = ["日", "月", "火", "水", "木", "金", "土"] %>
+        <% @shifts.each do |shift| %>
+           <tr>
+            <td>
+              <%= shift.start_time.year%>年
+              <%= shift.start_time.mon%>月
+              <%= shift.start_time.day%>日
+              (<%= days[shift.start_time.wday]%>)
+              <%= shift.start_time.hour%>時
+              <%= shift.start_time.min%>分
+            </td>
+            <td>
+              <%= shift.end_time.year%>年
+              <%= shift.end_time.mon%>月
+              <%= shift.end_time.day%>日
+              (<%= days[shift.end_time.wday]%>)
+              <%= shift.end_time.hour%>時
+              <%= shift.end_time.min%>分
+            </td>
+           </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>

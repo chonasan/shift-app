@@ -6,6 +6,7 @@
     　　<tr>
       　　<th>会員ID</th>
       　　<th>氏名</th>
+      　　<th></th>
       　　<th>ステータス</th>
       　　<th></th>
     　　</tr>
@@ -15,16 +16,18 @@
           <tr>
             <td><%= employee.id %></td>
             <td><%= employee.first_name + employee.last_name%></td>
-            <td>
+            <td><%= link_to "確定シフト確認", admin_shifts_personal_shift_path(employee),class: "btn btn-primary" %></td>
+            <td> 
               <% if employee.is_deleted == true %>
                 有効
               <% else %>
                 退会
               <% end %>
             </td>
+
             <td>
               <% if employee.is_deleted == true %>
-                <%= link_to "退会処理をする", admin_employees_unsubscribe_path(employee) %>
+                <%= link_to "退会処理をする", admin_employees_unsubscribe_path(employee),class: "btn btn-danger" %>
               <% end %>
             </td>
           </tr>
