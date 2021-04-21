@@ -26,10 +26,10 @@ class Admin::ShiftsController < ApplicationController
     monday  = Date.today-days
     @terms = (monday..monday+6)
     @shifts = Shift.where(state_status:["1","4"],:confirmation_start_time=> monday..monday+6)
-    
+
 
     @shifts.each do|shift|
-      if shift.state_status == 1
+      if (shift.state_status == 1) || (shift.state_status == 4)
         shift.update(state_status: "5")
       end
     end
