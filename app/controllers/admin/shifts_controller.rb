@@ -9,6 +9,7 @@ class Admin::ShiftsController < ApplicationController
         shift.save
       end
     end
+
     days = Date.today.wday-1
     if days == -1
       days = 6
@@ -16,8 +17,10 @@ class Admin::ShiftsController < ApplicationController
     monday  = Date.today-days
     @terms = (monday..monday+6)
     @shifts = Shift.where(state_status:["1","4","5"],:confirmation_start_time=> monday..monday+6)
+
     @shift_ids = @shifts.pluck(:id).join(',')
   end
+
 
   def edit_shifts
     @shift = Shift.all
@@ -42,32 +45,38 @@ class Admin::ShiftsController < ApplicationController
   def update_all
     @shift_ids = params[:shift_ids].split(',')
     @shifts = Shift.find(@shift_ids)
-
-    # days = Date.today.wday-1
-    # if days == -1
-    #   days = 6
-    # end
-    # monday  = Date.today-days
-    # @terms = (monday..monday+6)
-    # @shifts = Shift.where(state_status:["1","4"],:confirmation_start_time=> monday..monday+6)
     @shifts.each do|shift|
       if (shift.state_status == 1) || (shift.state_status == 4)
         shift.update(state_status: "5")
       end
     end
-    redirect_to admin_shifts_path
+    redirect_to admin_shifts_edit_shifts_path
   end
 
   def destroy
     shift = Shift.find(params[:id])
+
+    days = Date.today.wday-1
+    if days == -1
+      days = 6
+    end
+    monday  = Date.today-days
+
+    sdays = shift.confirmation_start_time.wday-1
+    if sdays == -1
+      sdays = 6
+    end
+    smonday  = shift.confirmation_start_time.wday-sdays
+
+    shift_ids = (smonday - monday)/7
+
     if shift.state_status == 4
       shift.destroy
     else
      shift.update(state_status: "2")
     end
-    
-    
-     redirect_to admin_shifts_path
+
+     redirect_to admin_shifts_edit_shifts_path(shift_ids)
   end
 
   def edit
@@ -102,9 +111,17 @@ class Admin::ShiftsController < ApplicationController
     shift = Shift.new(confirmation_start_time: confirmation_start_time, confirmation_end_time: confirmation_end_time,employee_id: params[:shift][:employee] )
     shift.save
     shift.update(state_status: "4")
-    
-    
-    redirect_to admin_shifts_path, notice: "shift is saved"
+
+    days = Date.today.wday-1
+    if days == -1
+      days = 6
+    end
+    monday  = Date.today-days  + (7 * params[:term].to_i)
+    @terms = (monday..monday+6)
+    @shifts = Shift.where(state_status:["1","4","5"],:confirmation_start_time=> monday..monday+6)
+    @shift_ids = @shifts.pluck(:id).join(',')
+
+    redirect_to admin_shifts_edit_shifts_path(params[:term]), notice: "shift is saved"
   end
 
   def show
