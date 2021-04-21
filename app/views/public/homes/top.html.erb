@@ -1,9 +1,70 @@
-<h1>Public::Homes#top</h1>
-<p>Find me in app/views/public/homes/top.html.erb</p>
+<div class="public-homes-about">
+  <div class="public-homes-about__contents">
+    <h1>This Service</h1>
+    <p>
+      <h4>「頭を悩ますシフト作成を、便利に！」</h4>
+      　オーナーさんとスタッフさん双方に向けた、シフト作成時の手間をなくし、便利にシフト作成をサポートするサービスです。
+    </p>
+    <ul>
+      <li>
+        <i class="far fa-4x fa-address-card"></i>
+        <h3>Information</h3>
+        <h5>「製作背景」</h5>
+          <div class="row">
+            <div class="col-8">
+              　前職ではCVS業界にて様々な役職として学生時代を含め９年間携わり、シフトの作成業務などを実施してきましたが、非常に手間で時間がかかる作業でした。<br>
+              シフトの作成には月10時間〜15時間程かかる場合が多く、特に、専従者（オーナー・店長）の時間が奪われる事が問題でありました。
+              シフトを作成している時間をスタッフさんの育成、売場改善などの時間にあてる事ができれば、
+              もっとより良い店舗に近づくていくのに、と思っていました。<br>
+              スタッフ側としては、シフトを提出する為にだけに、店舗に出向かなくてはならず、また、予定が分かった瞬間に提出する事ができないことで、提出が遅れてしまい、店舗に迷惑をかけてしまう事もあった。<br>
+              そんな時に、
+              「携帯で簡単に打ち込むだけで提出」
+              「シフト作成の手間を最小限にする事」
+              が出来たら双方の時間のムダを改善ができると感じた事が制作の背景です。<br><br>
+            </div>
+           </div>
 
-<%= link_to "Topページ",root_path , class: "btn btn-outline-light" %>
-<%= link_to "赤",root_path , class: "btn btn-danger" %>
-<%= link_to "Topページ",root_path , class: "btn btn-outline-light" %>
-<%= link_to "Topページ",root_path , class: "btn btn-outline-light" %>
-<%= link_to "Topページ",root_path , class: "btn btn-outline-light" %>
-<%= link_to "Topページ",root_path , class: "btn btn-outline-light" %>
+
+        <%= link_to '登録する', new_employee_registration_path, class: "btn btn-outline-dark" %><br><br>
+      </li>
+      <li>
+        <i class="fas fa-4x fas fa-users"></i>
+        <i class="fas fa-calendar-alt"></i>
+        <h3>employee</h3>
+        <div class="row">
+          <div class="col-8">
+            <h5>【従業員側】→スキマ時間に記載し、好きな時に提出できる</h5>
+            今まではシフトに入っていない週でも、提出と確認の為に必ず店舗に行かなければならず、また、用事などがあり提出が遅れたり、好きな時に提出できないなどの課題があった。携帯を使って、大学に行っている時や、家事の合間などのスキマ時間に提出できる<br><br>
+            <h5>改善できること</h5>
+            ①携帯で入力し提出が出来る様にする事によって、移動時間の無駄をなくす<br>
+            ②店舗に出向いて、翌週のシフトを確認しなくて良い<br><br>
+
+          </div>
+        </div>
+      </li>
+      <li>
+         <i class="fas fa-4x fas fa-user"></i>
+        <i class="fas fa-calendar-alt"></i>
+        <h3>admin</h3>
+        <div class="row">
+          <div class="col-8">
+            <h5>【店舗専従者側】→シフト作成の負担軽減</h5>
+            今までは従業員の方が手書きのメモで描いてきたものをを纏め、シフトを作成し、管理、運用していく労力が非常に負担であった 。デジタルの力で自動化する。<br><br>
+            <h5>改善できること</h5>
+             ①専従者がメモを一つ一つ確認して、転記する手間をなくす<br>
+            ②スタッフ間、同士のシフトのやりとりを一元化する<br><br>
+          </div>
+        </div>
+      </li>
+      <li>
+        <i class="far fa-4x fa-comments"></i>
+        <h3>Invitation</h3>
+        <div class="row">
+          <div class="col-8">
+          </div>
+        </div>
+      </li>
+    </ul>
+    <p><%= link_to 'TOPへ', root_path %></p>
+  </div>
+</div>
