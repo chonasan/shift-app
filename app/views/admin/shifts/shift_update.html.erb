@@ -7,6 +7,11 @@
         <p>登録する場合は、『登録する』をクリックしてください。</p>
         <%= link_to '登録しない', admin_shifts_path, class:"btn btn-primary" %>
         <%= link_to "登録する", admin_shifts_update_all_path, class: "btn btn-success" ,method: :patch %>
+        <%= form_with url: admin_shifts_update_all_path, method: :patch, local: true do |f| %>
+          <%= f.hidden_field :shift_ids, :value => @shift_ids %>
+          <%= f.submit "登録する(submit)", class: " btn btn-success" %>
+        <% end %>
+
       </div>
     </div>
   </div>

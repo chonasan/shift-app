@@ -10,10 +10,10 @@ Rails.application.routes.draw do
     get 'employees/unsubscribe/:id' => 'employees#unsubscribe',as: 'employees_unsubscribe'
     patch 'employees/withdraw/:id' => 'employees#withdraw', as: 'employees_withdraw'
     put 'employees/withdraw' => 'employees#withdraw'
-    get 'shifts/shift_update' => 'shifts#shift_update',as: 'shifts/shift_update'
+    post 'shifts/shift_update' => 'shifts#shift_update',as: 'shifts/shift_update'
     patch 'shifts/update_all' => 'shifts#update_all'
     get 'shifts/personal_shift/:id' => 'shifts#personal_shift',as: 'shifts/personal_shift'
-
+    get 'shifts/edit_shifts/:term' => 'shifts#edit_shifts', as: 'shifts/edit_shifts'
     resources :employees, only: [:index] do
       resources :fixed_shifts, only: [:show, :create, :updete]
     end

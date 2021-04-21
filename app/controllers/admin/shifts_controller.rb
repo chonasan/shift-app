@@ -16,18 +16,40 @@ class Admin::ShiftsController < ApplicationController
     monday  = Date.today-days
     @terms = (monday..monday+6)
     @shifts = Shift.where(state_status:["1","4","5"],:confirmation_start_time=> monday..monday+6)
+    @shift_ids = @shifts.pluck(:id).join(',')
   end
 
-  def update_all
+  def edit_shifts
+    @shift = Shift.all
+    @shift.each do|shift|
+      if shift.state_status == 0
+        shift.confirmation_start_time = shift.start_time
+        shift.confirmation_end_time = shift.end_time
+        shift.update(state_status: "1")
+        shift.save
+      end
+    end
     days = Date.today.wday-1
     if days == -1
       days = 6
     end
-    monday  = Date.today-days
+    monday  = Date.today-days  + (7 * params[:term].to_i)
     @terms = (monday..monday+6)
-    @shifts = Shift.where(state_status:["1","4"],:confirmation_start_time=> monday..monday+6)
+    @shifts = Shift.where(state_status:["1","4","5"],:confirmation_start_time=> monday..monday+6)
+    @shift_ids = @shifts.pluck(:id).join(',')
+  end
 
+  def update_all
+    @shift_ids = params[:shift_ids].split(',')
+    @shifts = Shift.find(@shift_ids)
 
+    # days = Date.today.wday-1
+    # if days == -1
+    #   days = 6
+    # end
+    # monday  = Date.today-days
+    # @terms = (monday..monday+6)
+    # @shifts = Shift.where(state_status:["1","4"],:confirmation_start_time=> monday..monday+6)
     @shifts.each do|shift|
       if (shift.state_status == 1) || (shift.state_status == 4)
         shift.update(state_status: "5")
@@ -40,19 +62,20 @@ class Admin::ShiftsController < ApplicationController
     shift = Shift.find(params[:id])
     if shift.state_status == 4
       shift.destroy
-      redirect_to admin_shifts_path
     else
      shift.update(state_status: "2")
-     redirect_to admin_shifts_path
     end
+    
+    
+     redirect_to admin_shifts_path
   end
 
   def edit
     @shift = shifts.find(params[:id])
   end
 
-  def update
-
+  def shift_update
+    @shift_ids = params[:shift_ids]
   end
 
   def personal_shift
@@ -79,6 +102,8 @@ class Admin::ShiftsController < ApplicationController
     shift = Shift.new(confirmation_start_time: confirmation_start_time, confirmation_end_time: confirmation_end_time,employee_id: params[:shift][:employee] )
     shift.save
     shift.update(state_status: "4")
+    
+    
     redirect_to admin_shifts_path, notice: "shift is saved"
   end
 
