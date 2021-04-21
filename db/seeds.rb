@@ -25,13 +25,13 @@ ShareComment.create!(
       cheakable_type: "Employee",
       cheakable_id: 1,
       image_id: "nil",
-      comment: "こんにちは"
+      comment: "皆様へ。 先程、お客様よりお取り置きの電話がありました。 お客様が、来店次第、対応よろしくお願いたします！！ 名前：安倍晋三, 電話：000-0000-0000, 来店時間：17日か18日の夕方頃 ,商品：スイカアイス５袋"
     },
     {
       cheakable_type: "Employee",
       cheakable_id: 1,
       image_id: "nil",
-      comment: "こんにちは"
+      comment: "素晴らしいです！！ありがとうございます。"
     },
 
   ]
