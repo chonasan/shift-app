@@ -48,10 +48,8 @@
 </table>
 
 <div class="col-12">
-  <%= link_to "シフトの内容を保存する", admin_shifts_shift_update_path, class: "btn btn-success"%>
-
   <%= form_with url: admin_shifts_shift_update_path, local: true do |f| %>
     <%= f.hidden_field :shift_ids, :value => @shift_ids %>
-    <%= f.submit "編集内容を保存", class: " btn btn-success" %>
+    <%= f.submit "シフトの内容をを保存する", class: " btn btn-success" %>
   <% end %>
 </div>

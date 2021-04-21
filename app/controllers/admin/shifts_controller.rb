@@ -50,7 +50,7 @@ class Admin::ShiftsController < ApplicationController
         shift.update(state_status: "5")
       end
     end
-    redirect_to admin_shifts_edit_shifts_path
+    redirect_to admin_shifts_path
   end
 
   def destroy
@@ -116,12 +116,17 @@ class Admin::ShiftsController < ApplicationController
     if days == -1
       days = 6
     end
-    monday  = Date.today-days  + (7 * params[:term].to_i)
-    @terms = (monday..monday+6)
-    @shifts = Shift.where(state_status:["1","4","5"],:confirmation_start_time=> monday..monday+6)
-    @shift_ids = @shifts.pluck(:id).join(',')
+    monday  = Date.today-days
 
-    redirect_to admin_shifts_edit_shifts_path(params[:term]), notice: "shift is saved"
+    sdays = shift.confirmation_start_time.wday-1
+    if sdays == -1
+      sdays = 6
+    end
+    smonday  = shift.confirmation_start_time-sdays
+
+    shift_ids = (smonday.to_date - monday)/7
+
+    redirect_to admin_shifts_edit_shifts_path(shift_ids), notice: "shift is saved"
   end
 
   def show
