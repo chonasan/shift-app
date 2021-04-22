@@ -8,11 +8,11 @@
         <tr>
           <td>開始時間</td>
           <td>終了時間</td>
-
         </tr>
 
         <% days = ["日", "月", "火", "水", "木", "金", "土"] %>
         <% @shifts.each do |shift| %>
+          <% if shift.confirmation_start_time >= Date.today-10 %>
            <tr>
             <td>
               <%= shift.confirmation_start_time.year%>年
@@ -31,6 +31,7 @@
               <%= shift.confirmation_end_time.min%>分
             </td>
            </tr>
+          <% end %>
         <% end %>
       </table>
     </div>

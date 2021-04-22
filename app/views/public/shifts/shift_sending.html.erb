@@ -21,29 +21,31 @@
     <% days = ["日", "月", "火", "水", "木", "金", "土"] %>
     <% @shifts.each do |shift| %>
       <% if shift.start_time != nil %>
-       <tr>
-        <td>
-          <%= shift.start_time.year%>年
-          <%= shift.start_time.mon%>月
-          <%= shift.start_time.day%>日
-          (<%= days[shift.start_time.wday]%>)
-          <%= shift.start_time.hour%>時
-          <%= shift.start_time.min%>分
-        </td>
-        <td>
-          <%= shift.end_time.year%>年
-          <%= shift.end_time.mon%>月
-          <%= shift.end_time.day%>日
-          (<%= days[shift.end_time.wday]%>)
-          <%= shift.end_time.hour%>時
-          <%= shift.end_time.min%>分
-        </td>
-        <td>
-          <% if shift.start_time >= Date.today+10 %>
-            <%= link_to "削除する", shift_path(shift.id), method: :delete, class: "btn btn-danger"  %>
-          <% end %>
-        </td>
-       </tr>
+        <% if shift.start_time >= Date.today-10 %>
+         <tr>
+          <td>
+            <%= shift.start_time.year%>年
+            <%= shift.start_time.mon%>月
+            <%= shift.start_time.day%>日
+            (<%= days[shift.start_time.wday]%>)
+            <%= shift.start_time.hour%>時
+            <%= shift.start_time.min%>分
+          </td>
+          <td>
+            <%= shift.end_time.year%>年
+            <%= shift.end_time.mon%>月
+            <%= shift.end_time.day%>日
+            (<%= days[shift.end_time.wday]%>)
+            <%= shift.end_time.hour%>時
+            <%= shift.end_time.min%>分
+          </td>
+          <td>
+            <% if shift.start_time >= Date.today+10 %>
+              <%= link_to "削除する", shift_path(shift.id), method: :delete, class: "btn btn-danger"  %>
+            <% end %>
+          </td>
+         </tr>
+        <% end %>
       <% end %>
     <% end %>
   </table>
