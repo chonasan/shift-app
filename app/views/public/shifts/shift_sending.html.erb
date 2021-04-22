@@ -4,49 +4,55 @@
       <h5>※１０日後以前は削除できません。変更がある場合は管理者に相談しましょう</h5>
     </div>
   </div>
-</div>
 
-<div class='col-md-8 offset-md-1'>
-  <div class="bg-light px-25 w-25 text-center">
-    <h2>送信シフト一覧</h2>
+  <div class='row mb-3'>
+    <div class='col-lg-3'>
+      <div class="bg-light px-25text-center">
+        <h3>送信シフト一覧</h3>
+      </div>
+    </div>
   </div>
-  <table class='table table-hover table-inverse'>
-    <tr>
-      <td>開始時間</td>
-      <td>終了時間</td>
-      <td></td>
-      <td></td>
-    </tr>
 
-    <% days = ["日", "月", "火", "水", "木", "金", "土"] %>
-    <% @shifts.each do |shift| %>
-      <% if shift.start_time != nil %>
-        <% if shift.start_time >= Date.today-10 %>
-         <tr>
-          <td>
-            <%= shift.start_time.year%>年
-            <%= shift.start_time.mon%>月
-            <%= shift.start_time.day%>日
-            (<%= days[shift.start_time.wday]%>)
-            <%= shift.start_time.hour%>時
-            <%= shift.start_time.min%>分
-          </td>
-          <td>
-            <%= shift.end_time.year%>年
-            <%= shift.end_time.mon%>月
-            <%= shift.end_time.day%>日
-            (<%= days[shift.end_time.wday]%>)
-            <%= shift.end_time.hour%>時
-            <%= shift.end_time.min%>分
-          </td>
-          <td>
-            <% if shift.start_time >= Date.today+10 %>
-              <%= link_to "削除する", shift_path(shift.id), method: :delete, class: "btn btn-danger"  %>
+  <div class='row mb-3'>
+    <div class='col-lg-10'>
+      <table class='table table-hover table-inverse'>
+        <tr>
+          <td>開始時間</td>
+          <td>終了時間</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <% days = ["日", "月", "火", "水", "木", "金", "土"] %>
+        <% @shifts.each do |shift| %>
+          <% if shift.start_time != nil %>
+            <% if shift.start_time >= Date.today-10 %>
+             <tr>
+              <td>
+                <%= shift.start_time.year%>年
+                <%= shift.start_time.mon%>月
+                <%= shift.start_time.day%>日
+                (<%= days[shift.start_time.wday]%>)
+                <%= shift.start_time.hour%>時
+                <%= shift.start_time.min%>分
+              </td>
+              <td>
+                <%= shift.end_time.year%>年
+                <%= shift.end_time.mon%>月
+                <%= shift.end_time.day%>日
+                (<%= days[shift.end_time.wday]%>)
+                <%= shift.end_time.hour%>時
+                <%= shift.end_time.min%>分
+              </td>
+              <td>
+                <% if shift.start_time >= Date.today+10 %>
+                  <%= link_to "削除する", shift_path(shift.id), method: :delete, class: "btn btn-danger"  %>
+                <% end %>
+              </td>
+             </tr>
             <% end %>
-          </td>
-         </tr>
+          <% end %>
         <% end %>
-      <% end %>
-    <% end %>
-  </table>
+      </table>
+    </div>
+  </div>
 </div>

@@ -1,9 +1,12 @@
-
-
-<div class="bg-light px-25 w-25 text-center">
-  <h3>確定シフト表</h3>
+<div class="container">
+  <div class='row'>
+    <div class="col-lg-3">
+      <div class="bg-light px-25 text-center">
+        <h3>確定シフト表</h3>
+      </div>
+    </div>
+  </div>
 </div>
-
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -24,23 +27,24 @@
             <td><%= date.day %>日</td>
             <td><%= %w(日 月 火 水 木 金 土)[date.wday]%></td>
             <% (0..23).each do |hour| %>
-               <% if shift.confirmation_start_time <= DateTime.new(date.year,date.month,date.day,hour,0,0) && shift.confirmation_end_time > DateTime.new(date.year,date.month,date.day,hour,0,0) %>
-                    <% if shift.confirmation_start_time == DateTime.new(date.year,date.month,date.day,hour,0,0) %>
-                        <td style="background-color:darkgray;">
-                          <%=shift.employee.first_name %>
-                          <%= shift.confirmation_start_time.hour %>時〜
-                          <%= shift.confirmation_end_time.hour %>時
-                        </td>
-                    <% else %>
-                        <td style="color:red;background-color:darkgray;"></td>
-                    <% end %>
+              <% if shift.confirmation_start_time <= DateTime.new(date.year,date.month,date.day,hour,0,0) && shift.confirmation_end_time > DateTime.new(date.year,date.month,date.day,hour,0,0) %>
+                <% if shift.confirmation_start_time == DateTime.new(date.year,date.month,date.day,hour,0,0) %>
+                  <td style="background-color:darkgray;">
+                    <%= shift.employee.first_name %>
+                    <%= shift.confirmation_start_time.hour %>時〜
+                    <%= shift.confirmation_end_time.hour %>時
+                  </td>
                 <% else %>
-                    <td></td>
+                  <td style="color:red;background-color:darkgray;"></td>
                 <% end %>
+                <% else %>
+                  <td></td>
+              <% end %>
             <% end %>
             </tr>
         <% end %>
-    <% end %>
-  </tbody>
-</table>
+      <% end %>
+    </tbody>
+  </table>
+
 
