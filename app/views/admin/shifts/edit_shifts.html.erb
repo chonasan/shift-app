@@ -13,7 +13,7 @@
   <thead>
     <tr>
       <th><%= @terms.first.month %>月</th>
-      <th></th>
+      <th><%= @terms.first.cweek %>週</th>
       <% (0..23).each do |hour|%>
       <th><%= hour %>時</th>
       <% end %>
@@ -51,6 +51,6 @@
 <div class="col-12">
   <%= form_with url: admin_shifts_shift_update_path, local: true do |f| %>
     <%= f.hidden_field :shift_ids, :value => @shift_ids %>
-    <%= f.submit "シフトの内容をを保存する", class: " btn btn-success" %>
+    <%= f.submit "シフトの内容を保存する", class: " btn btn-success" %>
   <% end %>
 </div>

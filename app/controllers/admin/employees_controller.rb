@@ -1,7 +1,7 @@
 class Admin::EmployeesController < ApplicationController
 
   def authority
-    @employees = Employee.all.page(params[:page]).per(10)
+    @employees = Employee.where(approval_status:["false"]).page(params[:page]).per(10)
   end
 
   def approval

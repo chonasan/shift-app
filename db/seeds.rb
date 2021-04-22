@@ -13,29 +13,6 @@ Admin.create!(
   last_name: "太郎"
   )
 
-ShareComment.create!(
-  [
-    {
-      cheakable_type: "Employee",
-      cheakable_id: 1,
-      image_id: "8d0a4e50fb40d359a32dc3fa55bcd9f5e2db04798876fb1690eb4929697f",
-      comment: "こんにちは"
-    },
-    {
-      cheakable_type: "Employee",
-      cheakable_id: 1,
-      image_id: "nil",
-      comment: "皆様へ。 先程、お客様よりお取り置きの電話がありました。 お客様が、来店次第、対応よろしくお願いたします！！ 名前：安倍晋三, 電話：000-0000-0000, 来店時間：17日か18日の夕方頃 ,商品：スイカアイス５袋"
-    },
-    {
-      cheakable_type: "Employee",
-      cheakable_id: 1,
-      image_id: "nil",
-      comment: "素晴らしいです！！ありがとうございます。"
-    },
-
-  ]
-)
 
 
 Employee.create!(
@@ -175,7 +152,7 @@ Employee.create!(
       last_name: "専太",
       first_name_kana: "ナンバ",
       last_name_kana: "センタ",
-      email: "0@0",
+      email: "00@00",
       postal_code: "5420076",
       address: "大阪府大阪市中央区難波4-4-4 難波御堂筋センタービル 8階",
       telephone_number: "00088889999",
@@ -188,7 +165,7 @@ Employee.create!(
       last_name: "一",
       first_name_kana: "ロッポンギ",
       last_name_kana: "ハジメ",
-      email: "1@1",
+      email: "11@11",
       postal_code: "1066223",
       address: "東京都港区六本木3-2-1 住友不動産六本木グランドタワー 23F",
       telephone_number: "09177772222",

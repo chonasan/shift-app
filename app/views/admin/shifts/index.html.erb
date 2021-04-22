@@ -12,7 +12,7 @@
   <thead>
     <tr>
       <th><%= @terms.first.month %>月</th>
-      <th></th>
+      <th><%= @terms.first.cweek %>週</th>
       <% (0..23).each do |hour|%>
       <th><%= hour %>時</th>
       <% end %>
