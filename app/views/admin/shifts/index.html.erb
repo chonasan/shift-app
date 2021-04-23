@@ -1,55 +1,57 @@
-<div class="bg-light px-25 w-25 text-center">
-  <h3>シフト編集画面</h3>
-</div>
-<div class="offset-11 mb-3">
-  <%= link_to "＞次週", admin_shifts_edit_shifts_path("1"), class: "btn btn-success"%>
-  <%= link_to new_admin_shift_path do %>
-  <i class="fas fa-plus-circle fa-3x size"></i>
-  <% end %>
-</div>
-
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th><%= @terms.first.month %>月</th>
-      <th><%= @terms.first.cweek %>週</th>
-      <% (0..23).each do |hour|%>
-      <th><%= hour %>時</th>
-      <% end %>
-    </tr>
-  </thead>
-  <tbody>
-    <% @terms.each do |date| %>
-        <% today_shift = @shifts.where('confirmation_start_time >= ? and confirmation_end_time <= ?', DateTime.new(date.year,date.month,date.day,0,0,0), DateTime.new(date.year,date.month,date.day,23,59,59)) %>
-        <% today_shift.each do |shift| %>
-            <tr>
-            <td><%= date.day %>日</td>
-            <td><%= %w(日 月 火 水 木 金 土)[date.wday]%></td>
-            <% (0..23).each do |hour| %>
-               <% if shift.confirmation_start_time <= DateTime.new(date.year,date.month,date.day,hour,0,0) && shift.confirmation_end_time > DateTime.new(date.year,date.month,date.day,hour,0,0) %>
-                    <% if shift.confirmation_start_time == DateTime.new(date.year,date.month,date.day,hour,0,0) %>
-                        <td style="background-color:darkgray;">
-                          <%=shift.employee.first_name %>
-                          <%= shift.confirmation_start_time.hour %>〜
-                          <%= shift.confirmation_end_time.hour %>
-                          <%= link_to "削除", admin_shift_path(shift.id), method: :delete %>
-                        </td>
-                    <% else %>
-                        <td style="color:red;background-color:darkgray;"></td>
-                    <% end %>
-                <% else %>
-                    <td></td>
-                <% end %>
-            <% end %>
-            </tr>
-        <% end %>
+<div style="margin-top: 30px; margin-bottom:100px; ">
+  <div class="bg-light px-25 w-25 text-center">
+    <h3>シフト編集画面</h3>
+  </div>
+  <div class="offset-11 mb-3">
+    <%= link_to "＞次週", admin_shifts_edit_shifts_path("1"), class: "btn btn-success"%>
+    <%= link_to new_admin_shift_path do %>
+    <i class="fas fa-plus-circle fa-3x size"></i>
     <% end %>
-  </tbody>
-</table>
+  </div>
 
-<div class="col-12">
-  <%= form_with url: admin_shifts_shift_update_path, local: true do |f| %>
-    <%= f.hidden_field :shift_ids, :value => @shift_ids %>
-    <%= f.submit "シフトの内容を保存する", class: " btn btn-success" %>
-  <% end %>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th><%= @terms.first.month %>月</th>
+        <th><%= @terms.first.cweek %>週</th>
+        <% (0..23).each do |hour|%>
+        <th><%= hour %>時</th>
+        <% end %>
+      </tr>
+    </thead>
+    <tbody>
+      <% @terms.each do |date| %>
+          <% today_shift = @shifts.where('confirmation_start_time >= ? and confirmation_end_time <= ?', DateTime.new(date.year,date.month,date.day,0,0,0), DateTime.new(date.year,date.month,date.day,23,59,59)) %>
+          <% today_shift.each do |shift| %>
+              <tr>
+              <td><%= date.day %>日</td>
+              <td><%= %w(日 月 火 水 木 金 土)[date.wday]%></td>
+              <% (0..23).each do |hour| %>
+                 <% if shift.confirmation_start_time <= DateTime.new(date.year,date.month,date.day,hour,0,0) && shift.confirmation_end_time > DateTime.new(date.year,date.month,date.day,hour,0,0) %>
+                      <% if shift.confirmation_start_time == DateTime.new(date.year,date.month,date.day,hour,0,0) %>
+                          <td style="background-color:darkgray;">
+                            <%=shift.employee.first_name %>
+                            <%= shift.confirmation_start_time.hour %>〜
+                            <%= shift.confirmation_end_time.hour %>
+                            <%= link_to "削除", admin_shift_path(shift.id), method: :delete %>
+                          </td>
+                      <% else %>
+                          <td style="color:red;background-color:darkgray;"></td>
+                      <% end %>
+                  <% else %>
+                      <td></td>
+                  <% end %>
+              <% end %>
+              </tr>
+          <% end %>
+      <% end %>
+    </tbody>
+  </table>
+
+  <div class="col-12">
+    <%= form_with url: admin_shifts_shift_update_path, local: true do |f| %>
+      <%= f.hidden_field :shift_ids, :value => @shift_ids %>
+      <%= f.submit "シフトの内容を保存する", class: " btn btn-success" %>
+    <% end %>
+  </div>
 </div>

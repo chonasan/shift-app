@@ -1,69 +1,71 @@
-<div class="container">
-  <div class='row mb-3'>
-    <div class="col-lg-10">
-      <h5>※カレンダーの日付をクリックして、シフト新規登録。</h5>
-    </div>
-    <div class="col-lg-2">
-      <li><%= link_to "シフト削除登録", shifts_shift_sending_path, class: "btn btn-danger" %></li>
+<div style="margin-top: 30px; margin-bottom:100px; ">
+  <div class="container">
+    <div class='row mb-3'>
+      <div class="col-lg-10">
+        <h5>※カレンダーの日付をクリックして、シフト新規登録。</h5>
+      </div>
+      <div class="col-lg-2">
+        <li><%= link_to "シフト削除登録", shifts_shift_sending_path, class: "btn btn-danger" %></li>
+      </div>
     </div>
   </div>
-</div>
 
-<div id="myModal" class="modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">シフト新規登録</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="container">
-         <%= form_with model: @shift do |f| %>
-          <div class='row mb-3'>
-            <div class="col-lg-4">
-              <%= f.select :year, (2021..2021).to_a, {include_blank: '年'}, { class: 'form-control', style: "width:130px;", required: true } %>
+  <div id="myModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">シフト新規登録</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+           <%= form_with model: @shift do |f| %>
+            <div class='row mb-3'>
+              <div class="col-lg-4">
+                <%= f.select :year, (2021..2021).to_a, {include_blank: '年'}, { class: 'form-control', style: "width:130px;", required: true } %>
+              </div>
+              <div class="col-lg-4">
+                <%= f.select :month, (01..12).to_a, {include_blank: '月'}, {class: 'form-control', style: "width:130px;",required: true } %>
+              </div>
+              <div class="col-lg-4">
+                <%= f.select :date, (01..31).to_a, {include_blank: '日'}, {class: 'form-control', style: "width:130px;",required: true } %>
+              </div>
             </div>
-            <div class="col-lg-4">
-              <%= f.select :month, (01..12).to_a, {include_blank: '月'}, {class: 'form-control', style: "width:130px;",required: true } %>
+            <div class='row mb-1'>
+              <div class="col-lg-4">
+                <h3>開始時間</h3>
+              </div>
+              <div class="col-lg-4">
+                <%= f.select :start_hour_time, (00..23).to_a, {include_blank: '開始時間'}, { class: 'form-control', style: "width:130px;",required: true } %>
+              </div>
+              <div class="col-lg-4">
+                <%= f.select :start_minute_time, [0,15,30,45], {include_blank: '開始分'}, { class: 'form-control', style: "width:130px;",required: true } %>
+              </div>
             </div>
-            <div class="col-lg-4">
-              <%= f.select :date, (01..31).to_a, {include_blank: '日'}, {class: 'form-control', style: "width:130px;",required: true } %>
+            <div class='row mb-3'>
+              <div class="col-lg-4">
+                <h3>終了時間</h3>
+              </div>
+              <div class="col-lg-4">
+                <%= f.select :end_hour_time, (00..23).to_a, {include_blank: '終了時間'}, { class: 'form-control', style: "width:130px;",required: true } %>
+              </div>
+             <div class="col-lg-4">
+                <%= f.select :end_minute_time, [0,15,30,45], {include_blank: '終了分'}, { class: 'form-control', style: "width:130px;",required: true } %>
+              </div>
             </div>
-          </div>
-          <div class='row mb-1'>
-            <div class="col-lg-4">
-              <h3>開始時間</h3>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <%= f.submit '登録', class: "btn btn-primary"%>
+              <% end %>
             </div>
-            <div class="col-lg-4">
-              <%= f.select :start_hour_time, (00..23).to_a, {include_blank: '開始時間'}, { class: 'form-control', style: "width:130px;",required: true } %>
-            </div>
-            <div class="col-lg-4">
-              <%= f.select :start_minute_time, [0,15,30,45], {include_blank: '開始分'}, { class: 'form-control', style: "width:130px;",required: true } %>
-            </div>
-          </div>
-          <div class='row mb-3'>
-            <div class="col-lg-4">
-              <h3>終了時間</h3>
-            </div>
-            <div class="col-lg-4">
-              <%= f.select :end_hour_time, (00..23).to_a, {include_blank: '終了時間'}, { class: 'form-control', style: "width:130px;",required: true } %>
-            </div>
-           <div class="col-lg-4">
-              <%= f.select :end_minute_time, [0,15,30,45], {include_blank: '終了分'}, { class: 'form-control', style: "width:130px;",required: true } %>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <%= f.submit '登録', class: "btn btn-primary"%>
-            <% end %>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<div id='calendar'></div>
+  <div id='calendar'></div>
+</div>
 
