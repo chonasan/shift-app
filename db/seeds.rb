@@ -13,25 +13,6 @@ Admin.create!(
   last_name: "太郎"
   )
 
-ShareComment.create!(
-  [
-
-    {
-      cheakable_type: "Employee",
-      cheakable_id: 1,
-      image_id: "nil",
-      comment: "皆様へ。 先程、お客様よりお取り置きの電話がありました。 お客様が、来店次第、対応よろしくお願いたします！！ 名前：安倍晋三, 電話：000-0000-0000, 来店時間：17日か18日の夕方頃 ,商品：スイカアイス５袋"
-    },
-    {
-      cheakable_type: "Employee",
-      cheakable_id: 1,
-      image_id: "nil",
-      comment: "素晴らしいです！！ありがとうございます。"
-    },
-
-  ]
-)
-
 
 Employee.create!(
   [
@@ -57,7 +38,7 @@ Employee.create!(
       postal_code: "2222222",
       address: "鹿児島県",
       telephone_number: "1231234",
-      is_deleted: true,
+      is_deleted: false,
       approval_status: true,
       password: "222222",
     },
@@ -70,7 +51,7 @@ Employee.create!(
       postal_code: "3333333",
       address: "山口県",
       telephone_number: "12312341234",
-      is_deleted: true,
+      is_deleted: false,
       approval_status: true,
       password: "333333",
     },
@@ -165,17 +146,146 @@ Employee.create!(
       approval_status: true,
       password: "000000",
     },
+
+    {
+      first_name: "高橋",
+      last_name: "是清",
+      first_name_kana: "タカハシ",
+      last_name_kana: "コレキヨ",
+      email: "11@11",
+      postal_code: "1111111",
+      address: "東京都",
+      telephone_number: "12312341234",
+      is_deleted: true,
+      approval_status: true,
+      password: "111111",
+    },
+
+     {
+      first_name: "加藤",
+      last_name: "友三郎",
+      first_name_kana: "カトウ",
+      last_name_kana: "トモザブロウ",
+      email: "12@12",
+      postal_code: "1212121",
+      address: "広島県",
+      telephone_number: "12312341234",
+      is_deleted: true,
+      approval_status: true,
+      password: "121212",
+    },
+
+     {
+      first_name: "清浦",
+      last_name: "奎吾",
+      first_name_kana: "キヨウラ",
+      last_name_kana: "ケイゴ",
+      email: "13@13",
+      postal_code: "1313131",
+      address: "熊本県",
+      telephone_number: "12312341234",
+      is_deleted: true,
+      approval_status: true,
+      password: "131313",
+    },
+
+     {
+      first_name: "加藤",
+      last_name: "高明",
+      first_name_kana: "カトウ",
+      last_name_kana: "タカアキ",
+      email: "14@14",
+      postal_code: "1414141",
+      address: "",
+      telephone_number: "12312341234",
+      is_deleted: true,
+      approval_status: true,
+      password: "141414",
+    },
+
+     {
+      first_name: "若槻",
+      last_name: "禮次郎",
+      first_name_kana: "ワカツキ",
+      last_name_kana: "レイジロウ",
+      email: "15@15",
+      postal_code: "1515151",
+      address: "島根県",
+      telephone_number: "12312341234",
+      is_deleted: true,
+      approval_status: true,
+      password: "151515",
+    },
+
+
+     {
+      first_name: "田中",
+      last_name: "義一",
+      first_name_kana: "タナカ",
+      last_name_kana: "ヨウイチ",
+      email: "16@16",
+      postal_code: "1616161",
+      address: "山口県",
+      telephone_number: "12312341234",
+      is_deleted: true,
+      approval_status: true,
+      password: "161616",
+    },
+
+     {
+      first_name: "濱口",
+      last_name: "雄幸",
+      first_name_kana: "ハマグチ",
+      last_name_kana: "オサチ",
+      email: "17@17",
+      postal_code: "1717171",
+      address: "高知県",
+      telephone_number: "12312341234",
+      is_deleted: true,
+      approval_status: true,
+      password: "171717",
+    },
+
+    {
+      first_name: "犬養",
+      last_name: "毅",
+      first_name_kana: "イヌカイ",
+      last_name_kana: "ツヨシ",
+      email: "18@18",
+      postal_code: "1818181",
+      address: "岡山県",
+      telephone_number: "12312341234",
+      is_deleted: true,
+      approval_status: true,
+      password: "181818",
+    },
+
+    {
+      first_name: "齋藤",
+      last_name: "實",
+      first_name_kana: "サイトウ",
+      last_name_kana: "マコト",
+      email: "19@19",
+      postal_code: "1919191",
+      address: "岩手県",
+      telephone_number: "12312341234",
+      is_deleted: true,
+      approval_status: true,
+      password: "191919",
+    },
+
+
     {
       first_name: "難波",
       last_name: "専太",
       first_name_kana: "ナンバ",
       last_name_kana: "センタ",
-      email: "00@00",
+      email: "000@000",
       postal_code: "5420076",
       address: "大阪府大阪市中央区難波4-4-4 難波御堂筋センタービル 8階",
       telephone_number: "00088889999",
-      is_deleted: false,
-      approval_status: true,
+      is_deleted: true,
+      approval_status: false,
       password: "000000",
     },
     {
@@ -183,7 +293,7 @@ Employee.create!(
       last_name: "一",
       first_name_kana: "ロッポンギ",
       last_name_kana: "ハジメ",
-      email: "11@11",
+      email: "111@111",
       postal_code: "1066223",
       address: "東京都港区六本木3-2-1 住友不動産六本木グランドタワー 23F",
       telephone_number: "09177772222",
@@ -193,3 +303,39 @@ Employee.create!(
     }
   ]
   )
+
+#   Shift.create!(
+# [
+
+#     {
+
+#       employee_id: 1,
+#       confirmation_start_time: nil,
+#       confirmation_end_time: nil,
+#       start_time: Fri, 23 Apr 2021 09:00:00 UTC +00:00,
+#       end_time: Fri, 23 Apr 2021 21:00:00 UTC +00:00,
+#       state_status: 0,
+
+#     },
+
+#   ]
+# )
+
+#   ShareComment.create!(
+#   [
+
+#     {
+#       cheakable_type: "Employee",
+#       cheakable_id: 1,
+#       image_id: "nil",
+#       comment: "皆様へ。 先程、お客様よりお取り置きの電話がありました。 お客様が、来店次第、対応よろしくお願いたします！！ 名前：安倍晋三, 電話：000-0000-0000, 来店時間：17日か18日の夕方頃 ,商品：スイカアイス５袋"
+#     },
+#     {
+#       cheakable_type: "Employee",
+#       cheakable_id: 1,
+#       image_id: "nil",
+#       comment: "素晴らしいです！！ありがとうございます。"
+#     },
+
+#   ]
+# )
