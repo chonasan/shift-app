@@ -82,7 +82,7 @@ gem "refile-mini_magick"
 # Bootstrap及びjQuery
 gem 'bootstrap', '~> 4.5.0'
 gem 'jquery-rails'
-gem 'bootstrap-sass'
+# gem 'bootstrap-sass'
 
 # font-awesome
 gem 'font-awesome-sass', '~> 5.13'
