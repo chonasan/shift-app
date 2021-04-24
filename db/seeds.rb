@@ -313,8 +313,28 @@ Employee.create!(
       employee_id: 1,
       confirmation_start_time: nil,
       confirmation_end_time: nil,
-      start_time: Time.parse((Time.now + 10.days).strftime("%Y-%m-%d 9:00"))  ,
-      end_time: Time.parse((Time.now + 10.days).strftime("%Y-%m-%d 9:00")),
+      start_time: Time.parse((Time.now - 6.days).strftime("%Y-%m-%d 6:00")),
+      end_time: Time.parse((Time.now - 6.days).strftime("%Y-%m-%d 9:00")),
+      state_status: 0,
+    },
+
+
+    {
+      employee_id: 1,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 5.days).strftime("%Y-%m-%d 6:00")),
+      end_time: Time.parse((Time.now - 5.days).strftime("%Y-%m-%d 9:00")),
+      state_status: 0,
+    },
+
+
+    {
+      employee_id: 1,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 3.days).strftime("%Y-%m-%d 6:00")),
+      end_time: Time.parse((Time.now - 3.days).strftime("%Y-%m-%d 9:00")),
       state_status: 0,
     },
 
@@ -322,14 +342,37 @@ Employee.create!(
       employee_id: 1,
       confirmation_start_time: nil,
       confirmation_end_time: nil,
-      start_time: Time.parse((Time.now + 10.days).strftime("%Y-%m-%d 9:00"))  ,
-      end_time: Time.parse((Time.now + 10.days).strftime("%Y-%m-%d 9:00")),
+      start_time: Time.parse((Time.now - 0.days).strftime("%Y-%m-%d 6:00")),
+      end_time: Time.parse((Time.now - 0.days).strftime("%Y-%m-%d 9:00")),
       state_status: 0,
     },
-    
-    
 
+    {
+      employee_id: 1,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 1.days).strftime("%Y-%m-%d 6:00")),
+      end_time: Time.parse((Time.now + 1.days).strftime("%Y-%m-%d 9:00")),
+      state_status: 0,
+    },
 
+    {
+      employee_id: 1,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 2.days).strftime("%Y-%m-%d 6:00")),
+      end_time: Time.parse((Time.now +  2.days).strftime("%Y-%m-%d 9:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 1,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 4.days).strftime("%Y-%m-%d 6:00")),
+      end_time: Time.parse((Time.now + 4.days).strftime("%Y-%m-%d 9:00")),
+      state_status: 0,
+    },
 
   ]
 )

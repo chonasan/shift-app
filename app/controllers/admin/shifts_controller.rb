@@ -39,7 +39,7 @@ class Admin::ShiftsController < ApplicationController
     @terms = (monday..monday+6)
     @shifts = Shift.where(state_status:["1","4","5"],:confirmation_start_time=> monday..monday+6)
     @shift_ids = @shifts.pluck(:id).join(',')
-    
+
     @term = (params[:term].to_i) + 1
   end
 
@@ -67,9 +67,9 @@ class Admin::ShiftsController < ApplicationController
     if sdays == -1
       sdays = 6
     end
-    smonday  = shift.confirmation_start_time-sdays
+    smonday  = shift.confirmation_start_time - sdays
 
-    shift_ids = (smonday.to_date - monday)/7
+    shift_ids = (smonday.to_date - monday).to_i / 7
 
     if shift.state_status == 4
       shift.destroy
@@ -124,7 +124,7 @@ class Admin::ShiftsController < ApplicationController
       sdays = 6
     end
     smonday  = shift.confirmation_start_time-sdays
-    shift_ids = (smonday.to_date - monday)/7
+    shift_ids = (smonday.to_date - monday).to_i / 7
 
     redirect_to admin_shifts_edit_shifts_path(shift_ids), notice: "shift is saved"
   end
