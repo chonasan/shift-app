@@ -17,7 +17,7 @@ class Admin::ShiftsController < ApplicationController
     monday  = Date.today-days
     @terms = (monday..monday+6)
     @shifts = Shift.where(state_status:["1","4","5"],:confirmation_start_time=> monday..monday+6)
-
+    @shifts = @shifts.order(confirmation_start_time: "ASC")
     @shift_ids = @shifts.pluck(:id).join(',')
   end
 
@@ -38,6 +38,7 @@ class Admin::ShiftsController < ApplicationController
     monday  = Date.today-days  + (7 * params[:term].to_i)
     @terms = (monday..monday+6)
     @shifts = Shift.where(state_status:["1","4","5"],:confirmation_start_time=> monday..monday+6)
+    @shifts = @shifts.order(confirmation_start_time: "ASC")
     @shift_ids = @shifts.pluck(:id).join(',')
 
     @term = (params[:term].to_i) + 1

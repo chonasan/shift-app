@@ -8,11 +8,11 @@ class Public::ShiftsController < ApplicationController
     monday  = Date.today-days
     @terms = (monday..monday+6)
     @shifts = Shift.where(state_status:["5"],:confirmation_start_time=> monday..monday+6)
-
+    @shifts = @shifts.order(confirmation_start_time: "ASC")
   end
 
   def calendar
-   @events = current_employee.shifts.where(state_status:["0","1","2"])
+   @events = current_employee.shifts.where(state_status:["0","1","2","5"])
   end
 
   def personal_shift

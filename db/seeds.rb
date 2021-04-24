@@ -374,6 +374,1306 @@ Employee.create!(
       state_status: 0,
     },
 
+    {
+      employee_id: 4,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 5.days).strftime("%Y-%m-%d 6:00")),
+      end_time: Time.parse((Time.now - 5.days).strftime("%Y-%m-%d 9:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 4,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 4.days).strftime("%Y-%m-%d 6:00")),
+      end_time: Time.parse((Time.now - 4.days).strftime("%Y-%m-%d 9:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 4,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 2.days).strftime("%Y-%m-%d 6:00")),
+      end_time: Time.parse((Time.now - 2.days).strftime("%Y-%m-%d 9:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 4,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 1.days).strftime("%Y-%m-%d 6:00")),
+      end_time: Time.parse((Time.now - 1.days).strftime("%Y-%m-%d 9:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 4,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 2.days).strftime("%Y-%m-%d 6:00")),
+      end_time: Time.parse((Time.now + 2.days).strftime("%Y-%m-%d 9:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 4,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 3.days).strftime("%Y-%m-%d 6:00")),
+      end_time: Time.parse((Time.now + 3.days).strftime("%Y-%m-%d 9:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 4,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 5.days).strftime("%Y-%m-%d 6:00")),
+      end_time: Time.parse((Time.now + 5.days).strftime("%Y-%m-%d 9:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 4,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 6.days).strftime("%Y-%m-%d 6:00")),
+      end_time: Time.parse((Time.now + 6.days).strftime("%Y-%m-%d 9:00")),
+      state_status: 0,
+    },
+
+
+    {
+      employee_id: 5,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 6.days).strftime("%Y-%m-%d 6:00")),
+      end_time: Time.parse((Time.now - 6.days).strftime("%Y-%m-%d 9:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 5,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 4.days).strftime("%Y-%m-%d 6:00")),
+      end_time: Time.parse((Time.now - 4.days).strftime("%Y-%m-%d 9:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 5,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 1.days).strftime("%Y-%m-%d 6:00")),
+      end_time: Time.parse((Time.now - 1.days).strftime("%Y-%m-%d 9:00")),
+      state_status: 0,
+    },
+
+
+     {
+      employee_id: 5,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 0.days).strftime("%Y-%m-%d 6:00")),
+      end_time: Time.parse((Time.now + 0.days).strftime("%Y-%m-%d 9:00")),
+      state_status: 0,
+    },
+
+
+     {
+      employee_id: 5,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 1.days).strftime("%Y-%m-%d 6:00")),
+      end_time: Time.parse((Time.now + 1.days).strftime("%Y-%m-%d 9:00")),
+      state_status: 0,
+    },
+
+   {
+      employee_id: 5,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 3.days).strftime("%Y-%m-%d 6:00")),
+      end_time: Time.parse((Time.now + 3.days).strftime("%Y-%m-%d 9:00")),
+      state_status: 0,
+    },
+
+     {
+      employee_id: 5,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 6.days).strftime("%Y-%m-%d 6:00")),
+      end_time: Time.parse((Time.now + 6.days).strftime("%Y-%m-%d 9:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 6,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 5.days).strftime("%Y-%m-%d 6:00")),
+      end_time: Time.parse((Time.now - 5.days).strftime("%Y-%m-%d 9:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 6,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 3.days).strftime("%Y-%m-%d 6:00")),
+      end_time: Time.parse((Time.now - 3.days).strftime("%Y-%m-%d 9:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 6,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 2.days).strftime("%Y-%m-%d 6:00")),
+      end_time: Time.parse((Time.now - 2.days).strftime("%Y-%m-%d 9:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 6,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 1.days).strftime("%Y-%m-%d 6:00")),
+      end_time: Time.parse((Time.now - 1.days).strftime("%Y-%m-%d 9:00")),
+      state_status: 0,
+    },
+
+
+     {
+      employee_id: 6,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 1.days).strftime("%Y-%m-%d 6:00")),
+      end_time: Time.parse((Time.now + 1.days).strftime("%Y-%m-%d 9:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 6,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 3.days).strftime("%Y-%m-%d 6:00")),
+      end_time: Time.parse((Time.now + 3.days).strftime("%Y-%m-%d 9:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 6,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 5.days).strftime("%Y-%m-%d 6:00")),
+      end_time: Time.parse((Time.now + 5.days).strftime("%Y-%m-%d 9:00")),
+      state_status: 0,
+    },
+
+     {
+      employee_id: 6,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 6.days).strftime("%Y-%m-%d 6:00")),
+      end_time: Time.parse((Time.now + 6.days).strftime("%Y-%m-%d 9:00")),
+      state_status: 0,
+    },
+
+
+    {
+      employee_id: 7,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 6.days).strftime("%Y-%m-%d 9:00")),
+      end_time: Time.parse((Time.now - 6.days).strftime("%Y-%m-%d 17:00")),
+      state_status: 0,
+    },
+
+
+    {
+      employee_id: 7,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 5.days).strftime("%Y-%m-%d 9:00")),
+      end_time: Time.parse((Time.now - 5.days).strftime("%Y-%m-%d 17:00")),
+      state_status: 0,
+    },
+
+
+    {
+      employee_id: 7,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 3.days).strftime("%Y-%m-%d 9:00")),
+      end_time: Time.parse((Time.now - 3.days).strftime("%Y-%m-%d 17:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 7,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 0.days).strftime("%Y-%m-%d 9:00")),
+      end_time: Time.parse((Time.now - 0.days).strftime("%Y-%m-%d 17:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 7,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 1.days).strftime("%Y-%m-%d 9:00")),
+      end_time: Time.parse((Time.now + 1.days).strftime("%Y-%m-%d 17:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 7,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 2.days).strftime("%Y-%m-%d 9:00")),
+      end_time: Time.parse((Time.now +  2.days).strftime("%Y-%m-%d 17:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 7,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 4.days).strftime("%Y-%m-%d 9:00")),
+      end_time: Time.parse((Time.now + 4.days).strftime("%Y-%m-%d 17:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 8,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 5.days).strftime("%Y-%m-%d 9:00")),
+      end_time: Time.parse((Time.now - 5.days).strftime("%Y-%m-%d 17:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 8,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 4.days).strftime("%Y-%m-%d 9:00")),
+      end_time: Time.parse((Time.now - 4.days).strftime("%Y-%m-%d 17:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 8,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 2.days).strftime("%Y-%m-%d 9:00")),
+      end_time: Time.parse((Time.now - 2.days).strftime("%Y-%m-%d 17:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 8,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 1.days).strftime("%Y-%m-%d 9:00")),
+      end_time: Time.parse((Time.now - 1.days).strftime("%Y-%m-%d 17:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 8,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 2.days).strftime("%Y-%m-%d 9:00")),
+      end_time: Time.parse((Time.now + 2.days).strftime("%Y-%m-%d 17:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 8,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 3.days).strftime("%Y-%m-%d 9:00")),
+      end_time: Time.parse((Time.now + 3.days).strftime("%Y-%m-%d 17:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 8,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 5.days).strftime("%Y-%m-%d 9:00")),
+      end_time: Time.parse((Time.now + 5.days).strftime("%Y-%m-%d 17:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 8,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 6.days).strftime("%Y-%m-%d 9:00")),
+      end_time: Time.parse((Time.now + 6.days).strftime("%Y-%m-%d 17:00")),
+      state_status: 0,
+    },
+
+
+    {
+      employee_id: 9,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 6.days).strftime("%Y-%m-%d 9:00")),
+      end_time: Time.parse((Time.now - 6.days).strftime("%Y-%m-%d 17:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 9,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 4.days).strftime("%Y-%m-%d 9:00")),
+      end_time: Time.parse((Time.now - 4.days).strftime("%Y-%m-%d 17:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 9,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 1.days).strftime("%Y-%m-%d 9:00")),
+      end_time: Time.parse((Time.now - 1.days).strftime("%Y-%m-%d 17:00")),
+      state_status: 0,
+    },
+
+
+     {
+      employee_id: 9,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 0.days).strftime("%Y-%m-%d 9:00")),
+      end_time: Time.parse((Time.now + 0.days).strftime("%Y-%m-%d 17:00")),
+      state_status: 0,
+    },
+
+
+     {
+      employee_id: 9,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 1.days).strftime("%Y-%m-%d 9:00")),
+      end_time: Time.parse((Time.now + 1.days).strftime("%Y-%m-%d 17:00")),
+      state_status: 0,
+    },
+
+   {
+      employee_id: 9,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 3.days).strftime("%Y-%m-%d 9:00")),
+      end_time: Time.parse((Time.now + 3.days).strftime("%Y-%m-%d 17:00")),
+      state_status: 0,
+    },
+
+     {
+      employee_id: 9,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 6.days).strftime("%Y-%m-%d 9:00")),
+      end_time: Time.parse((Time.now + 6.days).strftime("%Y-%m-%d 17:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 10,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 5.days).strftime("%Y-%m-%d 9:00")),
+      end_time: Time.parse((Time.now - 5.days).strftime("%Y-%m-%d 17:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 10,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 3.days).strftime("%Y-%m-%d 9:00")),
+      end_time: Time.parse((Time.now - 3.days).strftime("%Y-%m-%d 17:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 10,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 2.days).strftime("%Y-%m-%d 9:00")),
+      end_time: Time.parse((Time.now - 2.days).strftime("%Y-%m-%d 17:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 10,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 1.days).strftime("%Y-%m-%d 9:00")),
+      end_time: Time.parse((Time.now - 1.days).strftime("%Y-%m-%d 17:00")),
+      state_status: 0,
+    },
+
+
+     {
+      employee_id: 10,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 1.days).strftime("%Y-%m-%d 9:00")),
+      end_time: Time.parse((Time.now + 1.days).strftime("%Y-%m-%d 17:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 10,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 3.days).strftime("%Y-%m-%d 9:00")),
+      end_time: Time.parse((Time.now + 3.days).strftime("%Y-%m-%d 17:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 10,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 5.days).strftime("%Y-%m-%d 9:00")),
+      end_time: Time.parse((Time.now + 5.days).strftime("%Y-%m-%d 17:00")),
+      state_status: 0,
+    },
+
+     {
+      employee_id: 10,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 6.days).strftime("%Y-%m-%d 9:00")),
+      end_time: Time.parse((Time.now + 6.days).strftime("%Y-%m-%d 17:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 11,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 6.days).strftime("%Y-%m-%d 17:00")),
+      end_time: Time.parse((Time.now - 6.days).strftime("%Y-%m-%d 22:00")),
+      state_status: 0,
+    },
+
+
+    {
+      employee_id: 11,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 5.days).strftime("%Y-%m-%d 17:00")),
+      end_time: Time.parse((Time.now - 5.days).strftime("%Y-%m-%d 22:00")),
+      state_status: 0,
+    },
+
+
+    {
+      employee_id: 11,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 3.days).strftime("%Y-%m-%d 17:00")),
+      end_time: Time.parse((Time.now - 3.days).strftime("%Y-%m-%d 22:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 11,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 0.days).strftime("%Y-%m-%d 17:00")),
+      end_time: Time.parse((Time.now - 0.days).strftime("%Y-%m-%d 22:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 11,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 1.days).strftime("%Y-%m-%d 17:00")),
+      end_time: Time.parse((Time.now + 1.days).strftime("%Y-%m-%d 22:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 11,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 2.days).strftime("%Y-%m-%d 17:00")),
+      end_time: Time.parse((Time.now +  2.days).strftime("%Y-%m-%d 22:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 11,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 4.days).strftime("%Y-%m-%d 17:00")),
+      end_time: Time.parse((Time.now + 4.days).strftime("%Y-%m-%d 22:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 12,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 5.days).strftime("%Y-%m-%d 17:00")),
+      end_time: Time.parse((Time.now - 5.days).strftime("%Y-%m-%d 22:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 12,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 4.days).strftime("%Y-%m-%d 17:00")),
+      end_time: Time.parse((Time.now - 4.days).strftime("%Y-%m-%d 22:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 12,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 2.days).strftime("%Y-%m-%d 17:00")),
+      end_time: Time.parse((Time.now - 2.days).strftime("%Y-%m-%d 22:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 12,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 1.days).strftime("%Y-%m-%d 17:00")),
+      end_time: Time.parse((Time.now - 1.days).strftime("%Y-%m-%d 22:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 12,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 2.days).strftime("%Y-%m-%d 17:00")),
+      end_time: Time.parse((Time.now + 2.days).strftime("%Y-%m-%d 22:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 12,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 3.days).strftime("%Y-%m-%d 17:00")),
+      end_time: Time.parse((Time.now + 3.days).strftime("%Y-%m-%d 22:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 12,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 5.days).strftime("%Y-%m-%d 17:00")),
+      end_time: Time.parse((Time.now + 5.days).strftime("%Y-%m-%d 22:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 12,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 6.days).strftime("%Y-%m-%d 17:00")),
+      end_time: Time.parse((Time.now + 6.days).strftime("%Y-%m-%d 22:00")),
+      state_status: 0,
+    },
+
+
+    {
+      employee_id: 13,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 6.days).strftime("%Y-%m-%d 17:00")),
+      end_time: Time.parse((Time.now - 6.days).strftime("%Y-%m-%d 22:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 13,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 4.days).strftime("%Y-%m-%d 17:00")),
+      end_time: Time.parse((Time.now - 4.days).strftime("%Y-%m-%d 22:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 13,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 1.days).strftime("%Y-%m-%d 17:00")),
+      end_time: Time.parse((Time.now - 1.days).strftime("%Y-%m-%d 22:00")),
+      state_status: 0,
+    },
+
+
+     {
+      employee_id: 13,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 0.days).strftime("%Y-%m-%d 17:00")),
+      end_time: Time.parse((Time.now + 0.days).strftime("%Y-%m-%d 22:00")),
+      state_status: 0,
+    },
+
+
+     {
+      employee_id: 13,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 1.days).strftime("%Y-%m-%d 17:00")),
+      end_time: Time.parse((Time.now + 1.days).strftime("%Y-%m-%d 22:00")),
+      state_status: 0,
+    },
+
+   {
+      employee_id: 13,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 3.days).strftime("%Y-%m-%d 17:00")),
+      end_time: Time.parse((Time.now + 3.days).strftime("%Y-%m-%d 22:00")),
+      state_status: 0,
+    },
+
+     {
+      employee_id: 13,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 6.days).strftime("%Y-%m-%d 17:00")),
+      end_time: Time.parse((Time.now + 6.days).strftime("%Y-%m-%d 22:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 14,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 5.days).strftime("%Y-%m-%d 17:00")),
+      end_time: Time.parse((Time.now - 5.days).strftime("%Y-%m-%d 22:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 14,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 3.days).strftime("%Y-%m-%d 17:00")),
+      end_time: Time.parse((Time.now - 3.days).strftime("%Y-%m-%d 22:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 14,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 2.days).strftime("%Y-%m-%d 17:00")),
+      end_time: Time.parse((Time.now - 2.days).strftime("%Y-%m-%d 22:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 14,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 1.days).strftime("%Y-%m-%d 17:00")),
+      end_time: Time.parse((Time.now - 1.days).strftime("%Y-%m-%d 22:00")),
+      state_status: 0,
+    },
+
+
+     {
+      employee_id: 14,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 1.days).strftime("%Y-%m-%d 17:00")),
+      end_time: Time.parse((Time.now + 1.days).strftime("%Y-%m-%d 22:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 14,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 3.days).strftime("%Y-%m-%d 17:00")),
+      end_time: Time.parse((Time.now + 3.days).strftime("%Y-%m-%d 22:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 14,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 5.days).strftime("%Y-%m-%d 17:00")),
+      end_time: Time.parse((Time.now + 5.days).strftime("%Y-%m-%d 22:00")),
+      state_status: 0,
+    },
+
+     {
+      employee_id: 14,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 6.days).strftime("%Y-%m-%d 17:00")),
+      end_time: Time.parse((Time.now + 6.days).strftime("%Y-%m-%d 22:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 15,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 6.days).strftime("%Y-%m-%d 22:00")),
+      end_time: Time.parse((Time.now - 6.days).strftime("%Y-%m-%d 24:00")),
+      state_status: 0,
+    },
+
+
+    {
+      employee_id: 15,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 5.days).strftime("%Y-%m-%d 22:00")),
+      end_time: Time.parse((Time.now - 5.days).strftime("%Y-%m-%d 24:00")),
+      state_status: 0,
+    },
+
+
+    {
+      employee_id: 15,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 3.days).strftime("%Y-%m-%d 22:00")),
+      end_time: Time.parse((Time.now - 3.days).strftime("%Y-%m-%d 24:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 15,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 0.days).strftime("%Y-%m-%d 22:00")),
+      end_time: Time.parse((Time.now - 0.days).strftime("%Y-%m-%d 24:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 15,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 1.days).strftime("%Y-%m-%d 22:00")),
+      end_time: Time.parse((Time.now + 1.days).strftime("%Y-%m-%d 24:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 15,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 2.days).strftime("%Y-%m-%d 22:00")),
+      end_time: Time.parse((Time.now +  2.days).strftime("%Y-%m-%d 24:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 15,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 4.days).strftime("%Y-%m-%d 22:00")),
+      end_time: Time.parse((Time.now + 4.days).strftime("%Y-%m-%d 24:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 16,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 5.days).strftime("%Y-%m-%d 22:00")),
+      end_time: Time.parse((Time.now - 5.days).strftime("%Y-%m-%d 24:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 16,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 4.days).strftime("%Y-%m-%d 22:00")),
+      end_time: Time.parse((Time.now - 4.days).strftime("%Y-%m-%d 24:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 16,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 2.days).strftime("%Y-%m-%d 22:00")),
+      end_time: Time.parse((Time.now - 2.days).strftime("%Y-%m-%d 24:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 16,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 1.days).strftime("%Y-%m-%d 22:00")),
+      end_time: Time.parse((Time.now - 1.days).strftime("%Y-%m-%d 24:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 16,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 2.days).strftime("%Y-%m-%d 22:00")),
+      end_time: Time.parse((Time.now + 2.days).strftime("%Y-%m-%d 24:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 16,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 3.days).strftime("%Y-%m-%d 22:00")),
+      end_time: Time.parse((Time.now + 3.days).strftime("%Y-%m-%d 24:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 16,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 5.days).strftime("%Y-%m-%d 22:00")),
+      end_time: Time.parse((Time.now + 5.days).strftime("%Y-%m-%d 24:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 16,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 6.days).strftime("%Y-%m-%d 22:00")),
+      end_time: Time.parse((Time.now + 6.days).strftime("%Y-%m-%d 24:00")),
+      state_status: 0,
+    },
+
+
+    {
+      employee_id: 17,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 6.days).strftime("%Y-%m-%d 22:00")),
+      end_time: Time.parse((Time.now - 6.days).strftime("%Y-%m-%d 24:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 17,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 4.days).strftime("%Y-%m-%d 22:00")),
+      end_time: Time.parse((Time.now - 4.days).strftime("%Y-%m-%d 24:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 17,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 1.days).strftime("%Y-%m-%d 22:00")),
+      end_time: Time.parse((Time.now - 1.days).strftime("%Y-%m-%d 24:00")),
+      state_status: 0,
+    },
+
+
+     {
+      employee_id: 17,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 0.days).strftime("%Y-%m-%d 22:00")),
+      end_time: Time.parse((Time.now + 0.days).strftime("%Y-%m-%d 24:00")),
+      state_status: 0,
+    },
+
+
+     {
+      employee_id: 17,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 1.days).strftime("%Y-%m-%d 22:00")),
+      end_time: Time.parse((Time.now + 1.days).strftime("%Y-%m-%d 24:00")),
+      state_status: 0,
+    },
+
+   {
+      employee_id: 17,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 3.days).strftime("%Y-%m-%d 22:00")),
+      end_time: Time.parse((Time.now + 3.days).strftime("%Y-%m-%d 24:00")),
+      state_status: 0,
+    },
+
+     {
+      employee_id: 17,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 6.days).strftime("%Y-%m-%d 22:00")),
+      end_time: Time.parse((Time.now + 6.days).strftime("%Y-%m-%d 24:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 18,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 5.days).strftime("%Y-%m-%d 22:00")),
+      end_time: Time.parse((Time.now - 5.days).strftime("%Y-%m-%d 24:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 18,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 3.days).strftime("%Y-%m-%d 22:00")),
+      end_time: Time.parse((Time.now - 3.days).strftime("%Y-%m-%d 24:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 18,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 2.days).strftime("%Y-%m-%d 22:00")),
+      end_time: Time.parse((Time.now - 2.days).strftime("%Y-%m-%d 24:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 18,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 1.days).strftime("%Y-%m-%d 22:00")),
+      end_time: Time.parse((Time.now - 1.days).strftime("%Y-%m-%d 24:00")),
+      state_status: 0,
+    },
+
+
+    {
+      employee_id: 18,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 3.days).strftime("%Y-%m-%d 22:00")),
+      end_time: Time.parse((Time.now + 3.days).strftime("%Y-%m-%d 24:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 18,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 5.days).strftime("%Y-%m-%d 22:00")),
+      end_time: Time.parse((Time.now + 5.days).strftime("%Y-%m-%d 24:00")),
+      state_status: 0,
+    },
+
+     {
+      employee_id: 18,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 6.days).strftime("%Y-%m-%d 22:00")),
+      end_time: Time.parse((Time.now + 6.days).strftime("%Y-%m-%d 24:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 15,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 5.days).strftime("%Y-%m-%d 0:00")),
+      end_time: Time.parse((Time.now - 5.days).strftime("%Y-%m-%d 6:00")),
+      state_status: 0,
+    },
+
+
+    {
+      employee_id: 15,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 4.days).strftime("%Y-%m-%d 0:00")),
+      end_time: Time.parse((Time.now - 4.days).strftime("%Y-%m-%d 6:00")),
+      state_status: 0,
+    },
+
+
+    {
+      employee_id: 15,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 2.days).strftime("%Y-%m-%d 0:00")),
+      end_time: Time.parse((Time.now - 2.days).strftime("%Y-%m-%d 6:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 15,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 1.days).strftime("%Y-%m-%d 0:00")),
+      end_time: Time.parse((Time.now + 1.days).strftime("%Y-%m-%d 6:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 15,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 2.days).strftime("%Y-%m-%d 0:00")),
+      end_time: Time.parse((Time.now + 2.days).strftime("%Y-%m-%d 6:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 15,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 3.days).strftime("%Y-%m-%d 0:00")),
+      end_time: Time.parse((Time.now + 3.days).strftime("%Y-%m-%d 6:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 15,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 5.days).strftime("%Y-%m-%d 0:00")),
+      end_time: Time.parse((Time.now + 5.days).strftime("%Y-%m-%d 6:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 16,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 4.days).strftime("%Y-%m-%d 0:00")),
+      end_time: Time.parse((Time.now - 4.days).strftime("%Y-%m-%d 6:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 16,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 3.days).strftime("%Y-%m-%d 0:00")),
+      end_time: Time.parse((Time.now - 3.days).strftime("%Y-%m-%d 6:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 16,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 1.days).strftime("%Y-%m-%d 0:00")),
+      end_time: Time.parse((Time.now - 1.days).strftime("%Y-%m-%d 6:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 16,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 0.days).strftime("%Y-%m-%d 0:00")),
+      end_time: Time.parse((Time.now - 0.days).strftime("%Y-%m-%d 6:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 16,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 3.days).strftime("%Y-%m-%d 0:00")),
+      end_time: Time.parse((Time.now + 3.days).strftime("%Y-%m-%d 6:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 16,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 4.days).strftime("%Y-%m-%d 0:00")),
+      end_time: Time.parse((Time.now + 4.days).strftime("%Y-%m-%d 6:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 16,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 6.days).strftime("%Y-%m-%d 0:00")),
+      end_time: Time.parse((Time.now + 6.days).strftime("%Y-%m-%d 6:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 16,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 7.days).strftime("%Y-%m-%d 0:00")),
+      end_time: Time.parse((Time.now + 7.days).strftime("%Y-%m-%d 6:00")),
+      state_status: 0,
+    },
+
+
+    {
+      employee_id: 17,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 5.days).strftime("%Y-%m-%d 0:00")),
+      end_time: Time.parse((Time.now - 5.days).strftime("%Y-%m-%d 6:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 17,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 3.days).strftime("%Y-%m-%d 0:00")),
+      end_time: Time.parse((Time.now - 3.days).strftime("%Y-%m-%d 6:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 17,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 0.days).strftime("%Y-%m-%d 0:00")),
+      end_time: Time.parse((Time.now - 0.days).strftime("%Y-%m-%d 6:00")),
+      state_status: 0,
+    },
+
+
+     {
+      employee_id: 17,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 1.days).strftime("%Y-%m-%d 0:00")),
+      end_time: Time.parse((Time.now + 1.days).strftime("%Y-%m-%d 6:00")),
+      state_status: 0,
+    },
+
+
+     {
+      employee_id: 17,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 2.days).strftime("%Y-%m-%d 0:00")),
+      end_time: Time.parse((Time.now + 2.days).strftime("%Y-%m-%d 6:00")),
+      state_status: 0,
+    },
+
+   {
+      employee_id: 17,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 4.days).strftime("%Y-%m-%d 0:00")),
+      end_time: Time.parse((Time.now + 4.days).strftime("%Y-%m-%d 6:00")),
+      state_status: 0,
+    },
+
+     {
+      employee_id: 17,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 7.days).strftime("%Y-%m-%d 0:00")),
+      end_time: Time.parse((Time.now + 7.days).strftime("%Y-%m-%d 6:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 18,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 4.days).strftime("%Y-%m-%d 0:00")),
+      end_time: Time.parse((Time.now - 4.days).strftime("%Y-%m-%d 6:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 18,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 2.days).strftime("%Y-%m-%d 0:00")),
+      end_time: Time.parse((Time.now - 2.days).strftime("%Y-%m-%d 6:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 18,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 1.days).strftime("%Y-%m-%d 0:00")),
+      end_time: Time.parse((Time.now - 1.days).strftime("%Y-%m-%d 6:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 18,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now - 0.days).strftime("%Y-%m-%d 0:00")),
+      end_time: Time.parse((Time.now - 0.days).strftime("%Y-%m-%d 6:00")),
+      state_status: 0,
+    },
+
+
+    {
+      employee_id: 18,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 4.days).strftime("%Y-%m-%d 0:00")),
+      end_time: Time.parse((Time.now + 4.days).strftime("%Y-%m-%d 6:00")),
+      state_status: 0,
+    },
+
+    {
+      employee_id: 18,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 6.days).strftime("%Y-%m-%d 0:00")),
+      end_time: Time.parse((Time.now + 6.days).strftime("%Y-%m-%d 6:00")),
+      state_status: 0,
+    },
+
+     {
+      employee_id: 18,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 7.days).strftime("%Y-%m-%d 0:00")),
+      end_time: Time.parse((Time.now + 7.days).strftime("%Y-%m-%d 6:00")),
+      state_status: 0,
+    },
+
+
+
   ]
 )
 
