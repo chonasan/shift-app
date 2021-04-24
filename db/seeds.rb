@@ -304,22 +304,35 @@ Employee.create!(
   ]
   )
 
-#   Shift.create!(
-# [
 
-#     {
 
-#       employee_id: 1,
-#       confirmation_start_time: nil,
-#       confirmation_end_time: nil,
-#       start_time: Fri, 23 Apr 2021 09:00:00 UTC +00:00,
-#       end_time: Fri, 23 Apr 2021 21:00:00 UTC +00:00,
-#       state_status: 0,
+  Shift.create!(
+[
 
-#     },
+    {
+      employee_id: 1,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 10.days).strftime("%Y-%m-%d 9:00"))  ,
+      end_time: Time.parse((Time.now + 10.days).strftime("%Y-%m-%d 9:00")),
+      state_status: 0,
+    },
 
-#   ]
-# )
+    {
+      employee_id: 1,
+      confirmation_start_time: nil,
+      confirmation_end_time: nil,
+      start_time: Time.parse((Time.now + 10.days).strftime("%Y-%m-%d 9:00"))  ,
+      end_time: Time.parse((Time.now + 10.days).strftime("%Y-%m-%d 9:00")),
+      state_status: 0,
+    },
+    
+    
+
+
+
+  ]
+)
 
 #   ShareComment.create!(
 #   [
