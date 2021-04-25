@@ -53,7 +53,7 @@
             <ul class="navbar-nav ml-auto">
               <li><%= link_to "承認ページ", admin_employees_authority_path , class: "btn btn-outline-light"%></li>
               <li><%= link_to "従業員一覧", admin_employees_path , class: "btn btn-outline-light"%></li>
-              <li><%= link_to "作業登録", admin_tasks_path , class: "btn btn-outline-light"%></li>
+              <li><%= link_to "共有コメント", admin_share_comments_path , class: "btn btn-outline-light"%></li>
               <li><%= link_to "シフト作成", admin_shifts_path , class: "btn btn-outline-light" %></li>
               <li><%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class: "btn btn-outline-light"%></li>
             </ul>
@@ -65,7 +65,7 @@
           <ul>
             <li><%= link_to "承認ページ", admin_employees_authority_path , class: "btn btn-outline-light"%></li>
             <li><%= link_to "従業員一覧", admin_employees_path , class: "btn btn-outline-light"%></li>
-            <li><%= link_to "作業登録", admin_tasks_path , class: "btn btn-outline-light"%></li>
+            <li><%= link_to "共有コメント", admin_share_comments_path , class: "btn btn-outline-light"%></li>
             <li><%= link_to "シフト作成", admin_shifts_path , class: "btn btn-outline-light" %></li>
             <li><%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class: "btn btn-outline-light"%></li>
           </ul>

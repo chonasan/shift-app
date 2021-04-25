@@ -17,7 +17,7 @@ Rails.application.routes.draw do
     resources :employees, only: [:index] do
       resources :fixed_shifts, only: [:show, :create, :updete]
     end
-
+    resources :share_comments, only: [:index, :new, :destroy, :create]
     resources :tasks, only: [:index, :create, :edit, :update]
     resources :shifts
   end
@@ -40,7 +40,6 @@ Rails.application.routes.draw do
     resources :employees, only: [:index, :update]
     resources :messages, only: [:create]
     resources :rooms, only: [:index, :create,:show]
-
     resources :share_comments, only: [:index, :new, :destroy, :create] do
       resources :checks, only: [:create]
     end

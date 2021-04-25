@@ -1,6 +1,7 @@
 class Admin::FixedShiftsController < ApplicationController
   
   def show
+    
   end
 
   def create
