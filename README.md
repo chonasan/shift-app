@@ -1,5 +1,5 @@
 # アプリ名
-SHIFT-APP(仮)
+SHIFT-APP
 
 
 ## サイトテーマ
@@ -10,7 +10,7 @@ SHIFT-APP(仮)
 
 ## URL
 
-[]()
+[https://Shiftーapp.com](54.86.253.163)
 
 
 ## 制作の背景
@@ -38,11 +38,16 @@ SHIFT-APP(仮)
 
 ### 改善できること
 -  携帯で入力し提出が出来る様にする事によって、移動時間の無駄をなくす
-- 店舗に出向いて、翌週のシフトを確認しなくて良い
+-  店舗に出向いて、翌週のシフトを確認しなくて良い
 
 ## 機能一覧
--
--
+
+-  ユーザー認証(devise)
+-  カレンダー機能(fullcalendar)
+-  画像アップロード機能(Refile)
+-  HTTPS化(AWS)
+-  自動デプロイ(Github Actions)
+-  レスポンシブ対応
 
 
 チャレンジ要素一覧(クラウド教養コース)
@@ -56,32 +61,25 @@ SHIFT-APP(仮)
 
 ### バックエンド
 
--   Ruby 2.5.7
--   Rails 5.2.4.3
+-   Ruby  2.6.3
+-   Rails 5.2.5
 
 ### 開発環境
 
--
+-  OS：Linux(CentOS)
+-  言語：HTML,CSS,JavaScript,Ruby,SQL
+-  フレームワーク：Ruby on Rails
+-  JSライブラリ：jQuery
+-  IDE：Cloud9
 -
 
 ### 本番環境
 
--   AWS (EC2)
-
-### インフラ構成図
+-   AWS (EC2、RDS for MySQL、Route53、S3、Lambda)
+-   MySQL2
+-   Nginx、 Puma
 
 ### テスト
 
 -   Rspec (単体／結合）
-
-### その他使用技術
-
--
-
-### ER図
--
-
-
-
-## About me
 
