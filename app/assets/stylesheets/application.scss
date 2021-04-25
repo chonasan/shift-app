@@ -29,6 +29,7 @@
   height: 1500px; /* 高さ1400px（多めに設定） */
   display: flex; /* Flexboxの利用 */
   justify-content: center; /* 子要素の横並び・中央寄せ */
+
 }
 
 
@@ -58,13 +59,97 @@
 }
 
 .blog {
-  width: 1000px; /* 横幅600px */
+  width: 900px; /* 横幅600px */
   height: 1500px; /* 高さ600px */
 }
 
 .sidebar {
   width: 400px; /* 横幅240px */
   height: 1500px; /* 高さ600px */
+  text-align: center; /* 文字を中央揃えにする */
+}
+
+.sidebar-1 {
+  width: 100%; /* 横幅いっぱい */
+  height: 220px; /* 高さ300px */
+  background-image: url("sidebar-1.png");
+  background-size: cover;
+  border-radius: 30px;
+  padding-top: 170px;
+}
+
+.sidebar-2 {
+  width: 100%; /* 横幅いっぱい */
+  height: 220px; /* 高さ300px */
+  background-image: url("sidebar-2.png");
+  background-size: cover;
+  border-radius: 30px;
+  margin-top: 30px;
+}
+
+.sidebar-3 {
+  width: 100%; /* 横幅いっぱい */
+  height: 220px; /* 高さ300px */
+  background-image: url("sidebar-3.png");
+  background-size: cover;
+  border-radius: 30px;
+  margin-top: 30px;
+}
+
+.sidebar-4 {
+  width: 100%; /* 横幅いっぱい */
+  height: 220px; /* 高さ300px */
+  background-image: url("sidebar-4.png");
+  background-size: cover;
+  border-radius: 30px;
+  margin-top: 30px;
+}
+
+.sidebar-5 {
+  width: 100%; /* 横幅いっぱい */
+  height: 220px; /* 高さ300px */
+  background-image: url("sidebar-5.png");
+  background-size: cover;
+  border-radius: 30px;
+  margin-top: 30px;
+}
+
+.sidebar-6 {
+  width: 100%; /* 横幅いっぱい */
+  height: 220px; /* 高さ300px */
+  background-image: url("sidebar-6.png");
+  background-size: cover;
+  border-radius: 30px;
+  margin-top: 30px;
+}
+
+@media screen and (max-width:768px) {
+  .sidebar-7 {
+    width: 100%; /* 横幅いっぱい */
+    height: 220px; /* 高さ300px */
+    background-image: url("sidebar-7.png");
+    background-size: cover;
+    border-radius: 30px;
+    margin-top: 30px;
+  }
+
+  .sidebar-8 {
+    width: 100%; /* 横幅いっぱい */
+    height: 220px; /* 高さ300px */
+    background-image: url("sidebar-8.png");
+    background-size: cover;
+    border-radius: 30px;
+    margin-top: 30px;
+  }
+
+  .sidebar-9 {
+    width: 100%; /* 横幅いっぱい */
+    height: 220px; /* 高さ300px */
+    background-image: url("sidebar-9.png");
+    background-size: cover;
+    border-radius: 30px;
+    margin-top: 30px;
+  }
 
 }
 
@@ -73,8 +158,6 @@
   color: #fff;
   text-align: center;
 }
-
-
 
 /* ---------------------------- */
 /* ---- ハンバーガーアイコン ---- */
