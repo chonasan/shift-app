@@ -153,6 +153,36 @@
 
 }
 
+@media screen and (max-width:425px) {
+  .sidebar-7 {
+    width: 100%; /* 横幅いっぱい */
+    height: 220px; /* 高さ300px */
+    background-image: url("../sidebar-7.png");
+    background-size: cover;
+    border-radius: 30px;
+    margin-top: 30px;
+  }
+
+  .sidebar-8 {
+    width: 100%; /* 横幅いっぱい */
+    height: 220px; /* 高さ300px */
+    background-image: url("../sidebar-8.png");
+    background-size: cover;
+    border-radius: 30px;
+    margin-top: 30px;
+  }
+
+  .sidebar-9 {
+    width: 100%; /* 横幅いっぱい */
+    height: 220px; /* 高さ300px */
+    background-image: url("../sidebar-9.png");
+    background-size: cover;
+    border-radius: 30px;
+    margin-top: 30px;
+  }
+
+}
+
 
 .footer-text {
   color: #fff;
