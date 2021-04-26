@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     sessions: 'admin/sessions',
   }
   namespace :admin do
+    post '/homes/guest_sign_in', to: 'homes#guest_sign_in'
     get 'employees/authority' => 'employees#authority'
     get 'employees/approval/:id' => 'employees#approval', as:'employees_approval'
     patch 'employees/approval_process/:id' => 'employees#approval_process', as:'employees_approval_process'
@@ -28,7 +29,9 @@ Rails.application.routes.draw do
   }
 
    scope module: :public do
+
     root 'homes#top'
+    post '/homes/guest_sign_in', to: 'homes#guest_sign_in'
     get 'employees/mypage' => 'employees#mypage', as: 'mypage'
     get 'employee/edit' => 'employees#edit'
     get 'shifts/personal_shift' => 'shifts#personal_shift'
