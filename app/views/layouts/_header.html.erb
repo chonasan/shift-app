@@ -105,6 +105,8 @@
           <h2>MENU</h2>
           <ul>
             <li><%= link_to "Topページ",root_path , class: "btn btn-outline-light" %></li>
+            <li><%= link_to 'ゲストログイン（従業員）', homes_guest_sign_in_path, method: :post, class: "btn btn-outline-light" %></li>
+            <li><%= link_to 'ゲストログイン（管理者）', admin_homes_guest_sign_in_path, method: :post, class: "btn btn-outline-light" %></li>
             <li><%= link_to "新規登録", new_employee_registration_path, class: "btn btn-outline-light" %></li>
             <li><%= link_to "従業員ログイン", new_employee_session_path, class: "btn btn-outline-light" %></li>
             <li><%= link_to "管理者ログイン", admin_session_path, class: "btn btn-outline-light" %></li>
