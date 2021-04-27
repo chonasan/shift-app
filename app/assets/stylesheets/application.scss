@@ -124,6 +124,28 @@
 }
 
 @media screen and (max-width:768px) {
+
+.main {
+  width: 95%; /* 横幅いっぱい */
+  height: 100%; /* 高さ1400px（多めに設定） */
+  display: block; /* Flexboxの利用 */
+  justify-content: center; /* 子要素の横並び・中央寄せ */
+  margin: 0 auto;
+
+}
+
+.blog {
+  width: 100%; /* 横幅600px */
+  height: 100%; /* 高さ600px */
+}
+
+.sidebar {
+  width: 80%; /* 横幅240px */
+  height: 100%; /* 高さ600px */
+  text-align: center; /* 文字を中央揃えにする */
+  margin: 0 auto;
+}
+
   .sidebar-7 {
     width: 100%; /* 横幅いっぱい */
     height: 220px; /* 高さ300px */
@@ -154,6 +176,28 @@
 }
 
 @media screen and (max-width:425px) {
+
+.main {
+  width: 95%; /* 横幅いっぱい */
+  height: 100%; /* 高さ1400px（多めに設定） */
+  display: block; /* Flexboxの利用 */
+  justify-content: center; /* 子要素の横並び・中央寄せ */
+  margin: 0 auto;
+
+}
+
+.blog {
+  width: 100%; /* 横幅600px */
+  height: 100%; /* 高さ600px */
+}
+
+.sidebar {
+  width: 80%; /* 横幅240px */
+  height: 100%; /* 高さ600px */
+  text-align: center; /* 文字を中央揃えにする */
+  margin: 0 auto;
+}
+
   .sidebar-7 {
     width: 100%; /* 横幅いっぱい */
     height: 220px; /* 高さ300px */
@@ -182,6 +226,8 @@
   }
 
 }
+
+
 
 
 .footer-text {
