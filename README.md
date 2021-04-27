@@ -10,7 +10,7 @@ SHIFT-APP
 
 ## URL
 
-[https://Shiftーapp.com](54.86.253.163)
+[https://shift-app.work/](https://shift-app.work/)
 
 
 ## 制作の背景
