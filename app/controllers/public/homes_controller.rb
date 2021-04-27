@@ -2,6 +2,9 @@ class Public::HomesController < ApplicationController
   def top
   end
 
+  def about
+  end
+
 
   def guest_sign_in
     employee = Employee.find_or_create_by!(first_name: 'ゲスト',last_name: '太郎',first_name_kana: 'ゲスト',last_name_kana: 'タロウ',postal_code: '1234567',address: '日本',telephone_number: '12312341234',is_deleted: 'true',approval_status: 'true', email: 'guest@example.com') do |employee|
