@@ -41,9 +41,9 @@ Rails.application.routes.draw do
     get 'shifts/calendar' => 'shifts#calendar'
 
 
-    resources :employees, only: [:index, :update]
+    resources :employees, only: [:index, :show, :update]
     resources :messages, only: [:create]
-    resources :rooms, only: [:index, :create,:show]
+    resources :rooms, only: [:create,:show]
     resources :share_comments, only: [:index, :new, :destroy, :create] do
       resources :checks, only: [:create]
     end

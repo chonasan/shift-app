@@ -9,7 +9,7 @@ class Employee < ApplicationRecord
 
   has_many :shifts, dependent: :destroy
   has_many :fixed_shifts, dependent: :destroy
-  has_many :entrys, dependent: :destroy
+  has_many :entries, dependent: :destroy
   has_many :messages, dependent: :destroy
 
   def active_for_authentication?

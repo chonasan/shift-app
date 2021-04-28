@@ -1,2 +1,36 @@
-<h1>Public::Rooms#show</h1>
-<p>Find me in app/views/public/rooms/show.html.erb</p>
+<div class="room pt-2 pl-2">
+  <h4 class="rooms-title">メッセージルーム</h4>
+  <% @entries.each do |e| %>
+    <div class="user-name">
+    <strong>
+      <a class="rooms-user-link" href="/employees/<%= e.employee.id %>">
+        <%= e.employee.first_name %>さん
+      </a>
+    </strong>
+    </div>
+  <% end %>
+  <hr>
+  <div class="chats">
+    <div class="chat">
+      <% if @messages.present? %>
+        <% @messages.each do |m| %>
+          <div class="chat-box mb-1">
+            <div class="chat-face">
+              <%= m.employee.first_name %>
+            </div>
+            <div class="chat-hukidashi"> <strong><%= m.message %></strong> <br>
+              <%= m.created_at.strftime("%Y-%m-%d %H:%M")%>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="posts">
+      <%= form_for @message do |f| %>
+        <%= f.text_field :message, placeholder: "メッセージを入力して下さい" , size: 70, class:"form-text-field" %>
+          <%= f.hidden_field :room_id, value: @room.id %>
+            <%= f.submit "送信",class: 'form-submit'%>
+      <% end %>
+    </div>
+  </div>
+ </div>

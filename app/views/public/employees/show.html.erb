@@ -1,0 +1,77 @@
+
+<div style="margin-top: 30px; margin-bottom:100px; ">
+  <div class="container">
+  　<div class='row'>
+    
+      <div class="col-lg-2 mb-2">
+      <% unless @employee.id == current_employee.id %>
+        <% if @isRoom == true %>
+          <p class="user-show-room"><a href="/rooms/<%= @roomId %>" class="btn btn-primary btn-lg">メッセージへ</a>
+        <% else %>
+          <%= form_for @room do |f| %>
+            <%= fields_for @entry do |e| %>
+              <%= e.hidden_field :employee_id, value: @employee.id %>
+            <% end %>
+            <%= f.submit "メッセージ", class:"btn btn-primary btn-lg "%>
+          <% end %>
+        <% end %>
+      <% end %>
+     </div>
+  </div>
+
+  <div class='row'>
+    <div class="col-lg-12">
+      <table class="table table-bordered">
+      <tbody>
+        <tr>
+          <th>氏名</th>
+          <td><%= @employee.first_name%><%= @employee.last_name %></td>
+        </tr>
+        <tr>
+          <th>カナ</th>
+          <td><%= @employee.first_name_kana%><%= @employee.last_name_kana%></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class='row'>
+    <div class='col-12'>
+      <table class='table table-hover table-inverse'>
+      <div class="bg-light px-20 w-20 text-center">
+        <h2><%= @employee.first_name%>さん確定個人シフト一覧</h2>
+      </div>
+        <tr>
+          <td>開始時間</td>
+          <td>終了時間</td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <% days = ["日", "月", "火", "水", "木", "金", "土"] %>
+        <% @shifts.each do |shift| %>
+          <% if shift.confirmation_start_time >= Date.today-10 %>
+           <tr>
+            <td>
+              <%= shift.confirmation_start_time.year%>年
+              <%= shift.confirmation_start_time.mon%>月
+              <%= shift.confirmation_start_time.day%>日
+              (<%= days[shift.confirmation_start_time.wday]%>)
+              <%= shift.confirmation_start_time.hour%>時
+              <%= shift.confirmation_start_time.min%>分
+            </td>
+            <td>
+              <%= shift.confirmation_end_time.year%>年
+              <%= shift.confirmation_end_time.mon%>月
+              <%= shift.confirmation_end_time.day%>日
+              (<%= days[shift.confirmation_end_time.wday]%>)
+              <%= shift.confirmation_end_time.hour%>時
+              <%= shift.confirmation_end_time.min%>分
+            </td>
+           </tr>
+          <% end %>
+        <% end %>
+      </table>
+    </div>
+  </div>
