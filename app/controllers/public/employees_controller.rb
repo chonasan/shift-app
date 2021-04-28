@@ -49,14 +49,7 @@ class Public::EmployeesController < ApplicationController
       end
     end
 
-
-
-
   end
-
-
-
-
 
    private
 
