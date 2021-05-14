@@ -50,9 +50,6 @@ SHIFT-APP
 -  レスポンシブ対応
 
 
-チャレンジ要素一覧(クラウド教養コース)
-[https://docs.google.com/spreadsheets/d/1QbjIG4gFarc7ZmbjbBfupVNBq9HgxF-HSCxracp6jsA/edit#gid=1766617905](https://docs.google.com/spreadsheets/d/1QbjIG4gFarc7ZmbjbBfupVNBq9HgxF-HSCxracp6jsA/edit#gid=1766617905)
-
 ## 環境・使用技術
 
 ### フロントエンド
@@ -82,4 +79,14 @@ SHIFT-APP
 ### テスト
 
 -   Rspec (単体／結合）
+
+### インフラ構成図
+[https://drive.google.com/file/d/15bChHgfyEe8vXRws3-PuQS_Aaf25tFNl/view?usp=sharing](https://drive.google.com/file/d/15bChHgfyEe8vXRws3-PuQS_Aaf25tFNl/view?usp=sharing)
+
+### ER図
+[https://drive.google.com/file/d/1yqqtKQORji41WtYCDBpkHg4_S4y-G42h/view?usp=sharing](https://drive.google.com/file/d/1yqqtKQORji41WtYCDBpkHg4_S4y-G42h/view?usp=sharing)
+
+### テーブル定義書
+[https://drive.google.com/file/d/1FOYrp0eda0mBD-vx1BERTMMGz2hXF6wv/view?usp=sharing](https://drive.google.com/file/d/1FOYrp0eda0mBD-vx1BERTMMGz2hXF6wv/view?usp=sharing)
+
 
