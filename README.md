@@ -50,7 +50,7 @@ SHIFT-APP
 -  レスポンシブ対応
 
 
-##チャレンジ要素一覧(クラウド教養コース)
+## チャレンジ要素一覧(クラウド教養コース)
 [https://docs.google.com/spreadsheets/d/1QbjIG4gFarc7ZmbjbBfupVNBq9HgxF-HSCxracp6jsA/edit#gid=1766617905](https://docs.google.com/spreadsheets/d/1QbjIG4gFarc7ZmbjbBfupVNBq9HgxF-HSCxracp6jsA/edit#gid=1766617905)
 
 
