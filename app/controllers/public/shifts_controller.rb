@@ -61,7 +61,14 @@ class Public::ShiftsController < ApplicationController
   private
 
   def sent_shift_params
-    params.require(:shift).permit(:year, :month, :date, :start_hour_time, :start_minute_time, :end_hour_time, :end_minute_time)
+    params.require(:shift).permit(
+      :year,
+      :month,
+      :date,
+      :start_hour_time,
+      :start_minute_time,
+      :end_hour_time,
+      :end_minute_time)
   end
 
   def shift_params
