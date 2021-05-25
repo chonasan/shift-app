@@ -18,7 +18,11 @@
 //= require fullcalendar/main
 //= require popper
 //= require bootstrap-sprockets
-//= require_tree .
+//= require cable
+//= require_tree ./admin
+//= require_tree ./channels
+//= require_tree ./public
+
 
 document.addEventListener("turbolinks:load", function () {
 $(function() {
