@@ -30,7 +30,12 @@ class Admin::EmployeesController < ApplicationController
   end
 
   def employee_params
-    params.require(:employee).permit(:last_name, :first_name, :last_name_kana, :first_name_kana,:is_deleted,:approval_status)
+    params.require(:employee).permit(
+      :last_name, 
+      :first_name, 
+      :last_name_kana, 
+      :first_name_kana,
+      :is_deleted,:approval_status)
   end
 
 end
