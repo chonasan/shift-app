@@ -21,7 +21,8 @@
     </thead>
     <tbody>
       <% @terms.each do |date| %>
-        <% today_shift = @shifts.where('confirmation_start_time >= ? and confirmation_end_time <= ?', DateTime.new(date.year,date.month,date.day,0,0,0), DateTime.new(date.year,date.month,date.day,23,59,59)) %>
+        <% today_shift = @shifts.where(
+        'confirmation_start_time >= ? and confirmation_end_time <= ?', DateTime.new(date.year,date.month,date.day,0,0,0), DateTime.new(date.year,date.month,date.day,23,59,59)) %>
         <% today_shift.each do |shift| %>
             <tr>
             <td><%=shift.employee.first_name %></td>
