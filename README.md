@@ -93,4 +93,7 @@ SHIFT-APP
 ### テーブル定義書
 [https://drive.google.com/file/d/1FOYrp0eda0mBD-vx1BERTMMGz2hXF6wv/view?usp=sharing](https://drive.google.com/file/d/1FOYrp0eda0mBD-vx1BERTMMGz2hXF6wv/view?usp=sharing)
 
+### shift-app PF
+[https://docs.google.com/presentation/d/1wWrtIlIvYRbSYMw6cDAZeSqRIc7_uxORy5LbGW4EIWQ/edit?usp=sharing](https://docs.google.com/presentation/d/1wWrtIlIvYRbSYMw6cDAZeSqRIc7_uxORy5LbGW4EIWQ/edit?usp=sharing)
+
 
